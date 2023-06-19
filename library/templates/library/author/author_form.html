@@ -1,0 +1,12 @@
+{% block content %}
+<h1>Enter Author Data: </h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Save</button>
+    <input type="button" value="List Authors" onclick="window.location.href='{% url 'authors' %}'" />
+    <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+</form>
+{% endblock %}

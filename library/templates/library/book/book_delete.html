@@ -1,0 +1,10 @@
+{% block content %}
+<h1>Confirm Book Deletion</h1>
+<p>Are you sure you want to delete the book "{{ book.name }} " of "{{ book.author }} "?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a href="{% url 'books' %}">Cancel</a>
+</form>
+{% endblock %}

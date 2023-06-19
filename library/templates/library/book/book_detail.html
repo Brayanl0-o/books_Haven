@@ -1,0 +1,16 @@
+{% block content %}
+<h1>Welcome {{ user.fname }}</h1>
+<h3>Info about {{ book.name }}</h3>
+<ul>
+    <li>Name of book: {{ book.name}}</li>
+    <li>Author of book: {{ book.author }} </li>
+    <li>Release date: {{ book.release_date }}</li>
+    <li>Summary: {{ book.summary }}</li>
+    <br>
+    <input type="button" value="Edit" onclick="window.location.href='{% url 'book-edit' pk=book.pk %}'" />
+    <input type="button" value="Delete" onclick="window.location.href='{% url 'book-delete' pk=book.pk %}'" />
+    <input type="button" value="List Books" onclick="window.location.href='{% url 'books'  %}'" />
+    <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+
+</ul>
+{% endblock %}

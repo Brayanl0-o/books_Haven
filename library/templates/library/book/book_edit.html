@@ -1,0 +1,9 @@
+{% block content %}
+<h1>Edit Book</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+    <input type="button" value="List Books" onclick="window.location.href='{% url 'books'  %}'" />
+</form>
+{% endblock %}

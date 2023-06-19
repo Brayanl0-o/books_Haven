@@ -1,0 +1,10 @@
+{% block content %}
+<h1>Confirm User Deletion</h1>
+<p>Are you sure you want to delete the user: " # ID = {{ user.id }} {{ user.fname }} {{ user.lname }}"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a href="{% url 'books' %}">Cancel</a>
+</form>
+{% endblock %}

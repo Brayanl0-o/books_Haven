@@ -1,0 +1,24 @@
+{% block content %}
+<h1>Lista de Autores</h1>
+
+<ul>
+    {% for author in author_list %}
+    <li>
+        <a href="{% url 'author-detail' author.id %}">{{ author.name }}</a>
+        {% if author.books.exists %}
+        <ul>
+            {% for book in author.books.all %}
+            <li>{{ book.name }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No hay libros asociados.</p>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li>No hay autores disponibles.</li>
+    {% endfor %}
+</ul>
+<input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+<input type="button" value="Create new author" onclick="window.location.href='{% url 'create-author'  %}'" />
+{% endblock %}

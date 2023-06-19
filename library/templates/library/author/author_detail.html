@@ -1,0 +1,22 @@
+{% block content %}
+<h1>Perfil del Author</h1>
+
+<p> <strong style="font-size: 20px;">Name Author:</strong> {{ author.name }}</p>
+<p> <strong style="font-size: 20px;">Author birth date: </strong>{{ author.birth_date }}</p>
+<p> <strong style="font-size: 20px;">Author death date: </strong> {{ author.death_date }}</p>
+
+
+<h3>Books of author:</h3>
+<ul>
+    {% for book in author.books.all %}
+    <li>{{ book.name }}</li>
+    {% empty %}
+    <li>No hay libros disponibles.</li>
+    {% endfor %}
+</ul>
+<br>
+<input type="button" value="Edit" onclick="window.location.href='{% url 'author-edit' pk=author.pk %}'" />
+<input type="button" value="Delete" onclick="window.location.href='{% url 'author-delete' pk=author.pk %}'" />
+<input type="button" value="List Authors" onclick="window.location.href='{% url 'authors' %}'" />
+<input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+{% endblock %}
