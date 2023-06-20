@@ -7,11 +7,10 @@ class Author(models.Model):
     birth_date = models.DateField()
     death_date = models.DateField()
     books = models.ManyToManyField('Book', related_name='authors', blank=True)
-
+   
     def __str__(self):
         return self.name
-
+    
     def get_absolute_url(self):
         return reverse("author-detail", args=[str(self.pk)])
-
     
