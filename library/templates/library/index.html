@@ -1,5 +1,17 @@
 {% block content %}
 <h1>Welcome to the Cuyeca Virtual Library</h1>
+
+<h2>Authors</h2>
+{% if authors %}
+<ul>
+    {% for author in authors %}
+    <li><a href="{% url 'author-detail' pk=author.pk %}">{{ author.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+<input type="button" value="Create new author" onclick="window.location.href='{% url 'create-author' %}'" />
+
+
 <h2>Books</h2>
 {% if books %}
 <ul>
@@ -13,15 +25,6 @@
 <input type="button" value="Create new book" onclick="window.location.href='{% url 'create-book'  %}'" />
 
 
-<h2>Authors</h2>
-{% if authors %}
-<ul>
-    {% for author in authors %}
-    <li><a href="{% url 'author-detail' pk=author.pk %}">{{ author.name }}</a></li>
-    {% endfor %}
-</ul>
-{% endif %}
-<input type="button" value="Create new author" onclick="window.location.href='{% url 'create-author' %}'" />
 
 
 <h2>Users</h2>
