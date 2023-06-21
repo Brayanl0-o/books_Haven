@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #8c86869e; */
+    background-image: url('static/img/1229794.jpg');
+
+}
+
+h1 {
+
+
+    color: #101010;
+    text-align: center;
+}
+
+h2 {
+    margin-left: 450px;
+    color: #423f3f;
+}
+
+ul {
+
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+input[type="button"] {
+    margin-left: 420px;
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+
+    background-color: #02138024;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-height: 900px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+
+
+.authors-section {
+
+    margin-bottom: 30px;
+}
+
+.authors-section hr.line-img {
+    height: 100px;
+
+    background-image: url(static\library\img\autor-.webp);
+
+}
+
+.authors-section hr.line1 {
+
+    width: 600px;
+
+}
+
+.authors-section hr.line2 {
+
+    width: 300px;
+
+}
+
+.authors-section ul li {
+    margin-left: 400px;
+    margin-bottom: 10px;
+}
+
+.books-section {
+    margin-bottom: 30px;
+
+}
+
+.books-section ul li {
+    margin-left: 300px;
+    margin-bottom: 10px;
+}
+
+.books-section hr {
+    width: 500px;
+}
+
+.users-section {
+    margin-bottom: 30px;
+}
+
+.users-section ul li {
+    margin-left: 470px;
+    margin-bottom: 10px;
+}
+
+.users-section hr.line1 {
+    width: 400px;
+}
+
+.users-section hr.line2 {
+    width: 300px;
+}
