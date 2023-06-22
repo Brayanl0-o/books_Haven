@@ -2,7 +2,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'library/style_index.css' %}">
 
 <div class="head">
-    <h1> Cuyeca Virtual Library</h1>
+    <h1> Cuyeca </h1>
+    <h4>Virtual Library</h4>
     <br>
 </div>
 
@@ -17,7 +18,12 @@
 
 <div class="container">
     <div class="head_cont">
-        <h1>Welcome</h1>
+        <h1>¡WELCOME!</h1>
+    </div>
+    <div class="descr">
+        <p>
+            In this virtual library you can find books, authors and different users created.
+        </p>
     </div>
     <div class="books-section">
         <hr class="line1">
@@ -38,6 +44,7 @@
         <input type="button" value="Create new book" onclick="window.location.href='{% url 'create-book'  %}'" />
         <hr class="line4">
     </div>
+
     <div class="authors-section">
 
         <hr class="line1">
@@ -57,6 +64,7 @@
         <input type="button" value="Create new author" onclick="window.location.href='{% url 'create-author' %}'" />
         <hr class="line4">
     </div>
+
     <div class="users-section">
         <hr class="line1">
         <hr class="line-img">
@@ -72,5 +80,9 @@
         {% endif %}
         <input type="button" value="Create new user" onclick="window.location.href='{% url 'create-user'  %}'" />
         <hr class="line4">
+    </div>
+
+    <div class="future-section">
+        <H1>FUTURE SECTION</H1>
     </div>
 </div>
