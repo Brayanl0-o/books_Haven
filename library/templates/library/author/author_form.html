@@ -1,12 +1,35 @@
-{% block content %}
-<h1>Enter Author Data: </h1>
+{% block content %}{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'library/style_detail.css' %}">
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
+<div class="head">
+    <h1> Cuyeca </h1>
+    <h4>Virtual Library</h4>
+    <br>
+</div>
 
-    <button type="submit">Save</button>
-    <input type="button" value="List Authors" onclick="window.location.href='{% url 'authors' %}'" />
-    <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
-</form>
+<nav>
+    <ul>
+        <li><a href="{% url 'authors'%}">Authors</a></li>
+        <li><a href="{% url 'books'%}">Books</a></li>
+        <li><a href="{% url 'users'%}">Users</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <div class="head_cont">
+        <h1>Enter Author Data: </h1>
+    </div>
+    <div class="botoms">
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit">Save</button>
+            <input type="button" value="List Authors" onclick="window.location.href='{% url 'authors' %}'" />
+            <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+        </form>
+    </div>
+</div>
 {% endblock %}

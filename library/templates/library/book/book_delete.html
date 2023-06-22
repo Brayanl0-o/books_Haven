@@ -1,10 +1,34 @@
-{% block content %}
-<h1>Confirm Book Deletion</h1>
-<p>Are you sure you want to delete the book "{{ book.name }} " of "{{ book.author }} "?</p>
+{% block content %}{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'library/style_author.css' %}">
 
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Delete</button>
-    <a href="{% url 'books' %}">Cancel</a>
-</form>
+<div class="head">
+    <h1> Cuyeca </h1>
+    <h4>Virtual Library</h4>
+    <br>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'authors'%}">Authors</a></li>
+        <li><a href="{% url 'books'%}">Books</a></li>
+        <li><a href="{% url 'users'%}">Users</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <div class="head_cont">
+        <h1>Confirm Book Deletion</h1>
+    </div>
+    <div class="list">
+        <p>Are you sure you want to delete the book "{{ book.name }} " of "{{ book.author }} "?</p>
+    </div>
+    <div class="botoms">
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+            <a href="{% url 'books' %}">Cancel</a>
+        </form>
+    </div>
+</div>
 {% endblock %}
