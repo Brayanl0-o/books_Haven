@@ -1,14 +1,43 @@
-<h1>Welcome {{ user.first_name }} {{ user.last_name }}</h1>
-<h2>Here is your user's info:</h2>
-<ul>
-    <li><strong style="font-size: 20px;">Name of book: </strong>{{ user.first_name}}</li>
-    <li><strong style="font-size: 20px;">Autor of book:</strong> {{ user.last_name }}</li>
-    <li><strong style="font-size: 20px;">Number document: </strong>{{user.document_type }} : {{user.document_number }}
-    </li>
-    <li><strong style="font-size: 20px;">Age:</strong> {{ user.age }}</li>
+{% block content %}{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'library/style_author.css' %}">
+
+<div class="head">
+    <h1> Cuyeca </h1>
+    <h4>Virtual Library</h4>
     <br>
-    <input type="button" value="Edit" onclick="window.location.href='{% url 'user-edit' pk=user.pk %}'" />
-    <input type="button" value="Delete" onclick="window.location.href='{% url 'user-delete' pk=user.pk %}'" />
-    <input type="button" value="List Users" onclick="window.location.href='{% url 'users'  %}'" />
-    <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
-</ul>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'authors'%}">Authors</a></li>
+        <li><a href="{% url 'books'%}">Books</a></li>
+        <li><a href="{% url 'users'%}">Users</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <div class="head_cont">
+        <h1>Welcome<h2>{{ user.first_name }} {{ user.last_name }}</h2>
+        </h1>
+        <h1>Here is your user info:</h1>
+    </div>
+    <div class="list">
+        <ul>
+            <li><strong style="font-size: 20px;">Name of book: </strong>{{ user.first_name}}</li>
+            <li><strong style="font-size: 20px;">Autor of book:</strong> {{ user.last_name }}</li>
+            <li><strong style="font-size: 20px;">Number document: </strong>{{user.document_type }} :
+                {{user.document_number }}
+            </li>
+            <li><strong style="font-size: 20px;">Age:</strong> {{ user.age }}</li>
+        </ul>
+    </div>
+    <br>
+    <div class="botoms">
+        <input type="button" value="Edit" onclick="window.location.href='{% url 'user-edit' pk=user.pk %}'" />
+        <input type="button" value="Delete" onclick="window.location.href='{% url 'user-delete' pk=user.pk %}'" />
+        <input type="button" value="List Users" onclick="window.location.href='{% url 'users'  %}'" />
+        <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+    </div>
+</div>
+{% endblock %}

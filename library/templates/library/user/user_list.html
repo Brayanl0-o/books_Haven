@@ -1,13 +1,35 @@
-{% block content %}
-<h1>List of Users</h1>
-<ul>
-    {% for user in user_list %}
-    <li><a href="{% url 'user-detail' pk=user.pk %}">{{ user.first_name }} {{ user.last_name }}</a></li>
-    {% empty %}
-    <li>No users available.</li>
-    {% endfor %}
-</ul>
-<input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
-<input type="button" value="Create new user" onclick="window.location.href='{% url 'create-user'  %}'" />
+{% block content %}{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'library/style_author.css' %}">
 
+<div class="head">
+    <h1> Cuyeca </h1>
+    <h4>Virtual Library</h4>
+    <br>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'authors'%}">Authors</a></li>
+        <li><a href="{% url 'books'%}">Books</a></li>
+        <li><a href="{% url 'users'%}">Users</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="head_cont">
+        <h2>List of Users</h2>
+    </div>
+    <div class="list">
+        <ul>
+            {% for user in user_list %}
+            <li><a href="{% url 'user-detail' pk=user.pk %}">{{ user.first_name }} {{ user.last_name }}</a></li>
+            {% empty %}
+            <li>No users available.</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="botoms">
+        <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+        <input type="button" value="Create new user" onclick="window.location.href='{% url 'create-user'  %}'" />
+    </div>
+</div>
 {% endblock %}

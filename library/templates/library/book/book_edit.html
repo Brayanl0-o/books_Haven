@@ -1,9 +1,32 @@
-{% block content %}
-<h1>Edit Book</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-    <input type="button" value="List Books" onclick="window.location.href='{% url 'books'  %}'" />
-</form>
+{% block content %}{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'library/style_author.css' %}">
+
+<div class="head">
+    <h1> Cuyeca </h1>
+    <h4>Virtual Library</h4>
+    <br>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'authors'%}">Authors</a></li>
+        <li><a href="{% url 'books'%}">Books</a></li>
+        <li><a href="{% url 'users'%}">Users</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <div class="head_cont">
+        <h1>Edit Book</h1>
+    </div>
+    <div class="list">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+            <input type="button" value="List Books" onclick="window.location.href='{% url 'books'  %}'" />
+        </form>
+    </div>
+</div>
 {% endblock %}

@@ -1,16 +1,40 @@
-{% block content %}
-<h1>Welcome {{ user.fname }}</h1>
-<h3>Info about {{ book.name }}</h3>
-<ul>
-    <li>Name of book: {{ book.name}}</li>
-    <li>Author of book: {{ book.author }} </li>
-    <li>Release date: {{ book.release_date }}</li>
-    <li>Summary: {{ book.summary }}</li>
-    <br>
-    <input type="button" value="Edit" onclick="window.location.href='{% url 'book-edit' pk=book.pk %}'" />
-    <input type="button" value="Delete" onclick="window.location.href='{% url 'book-delete' pk=book.pk %}'" />
-    <input type="button" value="List Books" onclick="window.location.href='{% url 'books'  %}'" />
-    <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+{% block content %}{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'library/style_author.css' %}">
 
-</ul>
+<div class="head">
+    <h1> Cuyeca </h1>
+    <h4>Virtual Library</h4>
+    <br>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'authors'%}">Authors</a></li>
+        <li><a href="{% url 'books'%}">Books</a></li>
+        <li><a href="{% url 'users'%}">Users</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <div class="head_cont">
+        <h1>Welcome {{ user.fname }}</h1>
+    </div>
+    <div class="list">
+        <h3>Info about {{ book.name }}</h3>
+        <ul>
+            <li>Name of book: {{ book.name}}</li>
+            <li>Author of book: {{ book.author }} </li>
+            <li>Release date: {{ book.release_date }}</li>
+            <li>Summary: {{ book.summary }}</li>
+        </ul>
+    </div>
+    <br>
+    <div class="botoms">
+        <input type="button" value="Edit" onclick="window.location.href='{% url 'book-edit' pk=book.pk %}'" />
+        <input type="button" value="Delete" onclick="window.location.href='{% url 'book-delete' pk=book.pk %}'" />
+        <input type="button" value="List Books" onclick="window.location.href='{% url 'books'  %}'" />
+        <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+    </div>
+</div>
 {% endblock %}

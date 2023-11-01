@@ -1,0 +1,32 @@
+# Archivos y directorios generados automáticamente
+__pycache__/
+*.pyc
+*.pyo
+
+# Entornos virtuales
+venv/
+*.pyc
+
+# Archivos de registro y salida
+*.log
+*.out
+
+# Archivos de configuración local
+config.json
+
+# Directorios de datos locales
+data/
+
+# Archivos de dependencias
+requirements.txt
+
+# Archivos de caché y registros de IDE
+.idea/
+.vscode/
+
+# Archivos de sistema de macOS
+.DS_Store
+
+# Archivos de tokens y claves de acceso
+secrets.py
+api_keys.py
