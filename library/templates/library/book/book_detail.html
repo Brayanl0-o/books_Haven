@@ -31,10 +31,10 @@
     </div>
     <br>
     <div class="botoms">
-        <input type="button" value="Edit" onclick="window.location.href='{% url 'book-edit' pk=book.pk %}'" />
-        <input type="button" value="Delete" onclick="window.location.href='{% url 'book-delete' pk=book.pk %}'" />
-        <input type="button" value="List Books" onclick="window.location.href='{% url 'books'  %}'" />
-        <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+        <input type="button" value="Edit" onclick="window.location.href=`{% url 'book-edit' pk=book.pk %}`" />
+        <input type="button" value="Delete" onclick="window.location.href=`{% url 'book-delete' pk=book.pk %}`" />
+        <input type="button" value="List Books" onclick="window.location.href=`{% url 'books'  %}`" />
+        <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
     </div>
 </div>
 {% endblock %}
