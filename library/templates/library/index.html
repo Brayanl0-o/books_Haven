@@ -41,7 +41,7 @@
 
         </ul>
         {% endif %}
-        <input type="button" value="Create new book" onclick="window.location.href='{% url 'create-book'  %}'" />
+        <input type="button" value="Create new book" onclick="window.location.href=`{% url 'create-book'  %}`" />
         <hr class="line4">
     </div>
 
@@ -61,7 +61,7 @@
         </ul>
 
         {% endif %}
-        <input type="button" value="Create new author" onclick="window.location.href='{% url 'create-author' %}'" />
+        <input type="button" value="Create new author" onclick="window.location.href=`{% url 'create-author' %}`" />
         <hr class="line4">
     </div>
 
@@ -78,7 +78,7 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <input type="button" value="Create new user" onclick="window.location.href='{% url 'create-user'  %}'" />
+        <input type="button" value="Create new user" onclick="window.location.href=`{% url 'create-user'  %}`" />
         <hr class="line4">
     </div>
 
