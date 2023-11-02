@@ -1,22 +1,34 @@
+"""
+Vistas genericas para administrar los Usuarios
+"""
 from django.views import generic
-from ..models.users import User
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, DeleteView
+from ..models.users import User
 
 
-class userListView(generic.ListView):
+class UserListView(generic.ListView):
+    """
+    Vista genérica para mostrar una lista de Usuarios.
+    """
     model = User
     context_object_name = 'user_list'
     template_name = 'library/user/user_list.html'
 
 
-class userDetailView(generic.DetailView):
+class UserDetailView(generic.DetailView):
+    """
+    Vista genérica para mostrar los detalles de un Usuario.
+    """
     model = User
     context_object_name = 'user'
     template_name = 'library/user/user_detail.html'
 
 
-class userCreateView(generic.CreateView):
+class UserCreateView(generic.CreateView):
+    """
+    Vista genérica para crear un nuevo Usuario.
+    """
     model = User
     context_object_name = 'user'
     fields = [
@@ -30,7 +42,10 @@ class userCreateView(generic.CreateView):
     success_url = reverse_lazy('users')
 
 
-class userEditView(UpdateView):
+class UserEditView(UpdateView):
+    """
+    Vista genérica para editar los detalles de un usuario existente.
+    """
     model = User
     template_name = 'library/user/user_edit.html'
     fields = ['first_name', 'last_name', 'document_type',
@@ -38,7 +53,10 @@ class userEditView(UpdateView):
     success_url = reverse_lazy('users')
 
 
-class userDeleteView(DeleteView):
+class UserDeleteView(DeleteView):
+    """
+    Vista genérica para eliminar un usuario existente.
+    """
     model = User
     template_name = 'library/user/user_delete.html'
     fields = ['first_name', 'last_name', 'document_type',

@@ -1,22 +1,34 @@
+"""
+Vistas genericas para administrar los libros
+"""
 from django.views import generic
-from ..models.book import Book
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, DeleteView
+from ..models.book import Book
 
 
-class bookListView(generic.ListView):
+class BookListView(generic.ListView):
+    """
+    Vista genérica para mostrar una lista de libros.
+    """
     model = Book
     context_object_name = 'book_list'
     template_name = 'library/book/book_list.html'
 
 
-class bookDetailView(generic.DetailView):
+class BookDetailView(generic.DetailView):
+    """
+    Vista genérica para mostrar los detalles de un libro.
+    """
     model = Book
     context_object_name = 'book'
     template_name = 'library/book/book_detail.html'
 
 
-class bookCreateView(generic.CreateView):
+class BookCreateView(generic.CreateView):
+    """
+    Vista genérica para crear un nuevo libro.
+    """
     model = Book
     context_object_name = 'book'
     fields = [
@@ -30,14 +42,21 @@ class bookCreateView(generic.CreateView):
     template_name = 'library/book/book_form.html'
 
 
-class bookEditView(UpdateView):
+class BookEditView(UpdateView):
+    """
+    Vista genérica para editar los detalles de un libro existente.
+    """
     model = Book
     template_name = 'library/book/book_edit.html'
     fields = ['name', 'author', 'genre',
               'release_date', 'number_pages', 'summary']
     success_url = reverse_lazy('books')
 
-class bookDeleteView(DeleteView):
+
+class BookDeleteView(DeleteView):
+    """
+    Vista genérica para eliminar un libro existente.
+    """
     model = Book
     template_name = 'library/book/book_delete.html'
     fields = ['fname', 'lname', 'document_type',
