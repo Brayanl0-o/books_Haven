@@ -37,10 +37,10 @@
     </div>
     <br>
     <div class="botoms">
-        <input type="button" value="Edit" onclick="window.location.href='{% url 'author-edit' pk=author.pk %}'" />
-        <input type="button" value="Delete" onclick="window.location.href='{% url 'author-delete' pk=author.pk %}'" />
-        <input type="button" value="List Authors" onclick="window.location.href='{% url 'authors' %}'" />
-        <input type="button" value="Go back home" onclick="window.location.href='{% url 'index'  %}'" />
+        <input type="button" value="Edit" onclick="window.location.href=`{% url 'author-edit' pk=author.pk %}`" />
+        <input type="button" value="Delete" onclick="window.location.href=`{% url 'author-delete' pk=author.pk %}`" />
+        <input type="button" value="List Authors" onclick="window.location.href=`{% url 'authors' %}`" />
+        <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
     </div>
 </div>
 {% endblock %}
