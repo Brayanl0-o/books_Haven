@@ -7,7 +7,6 @@
 # @receiver(m2m_changed, sender=Author.books.through)
 # def update_author_on_book_change(sender, instance, action, reverse, model, pk_set, **kwargs):
 #     if action == 'pre_clear' and not reverse:
-       
 #         model.objects.filter(pk__in=pk_set).update(author=None)
 
 
