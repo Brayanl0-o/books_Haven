@@ -1,18 +1,39 @@
+"""
+Módulo que contiene la definición del modelo books
+
+Este módulo define el modelo Author que representa los libros.
+"""
 from django.db import models
 from django.urls import reverse
 from .author import Author
 
 
 class Book(models.Model):
+    """
+    Modelo que representa un libro.
+
+    Atributos:
+    name (str): El nombre del libro.
+    author (Author): El autor del libro.
+    genre (str): El género del libro.
+    release_date (int): El año de publicación del libro.
+    number_pages (int): El número de páginas del libro.
+    summary (str): Un resumen del contenido del libro.
+    """
+
     name = models.CharField(max_length=60)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, blank=True, null=True)
+    author = models.ForeignKey(
+        Author, on_delete=models.CASCADE, blank=True, null=True)
     genre = models.CharField(max_length=100)
     release_date = models.IntegerField(default=0)
     number_pages = models.IntegerField(default=0)
     summary = models.TextField(default=0, max_length=800)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     def get_absolute_url(self):
+        """
+        Devuelve la URL absoluta para ver los detalles del libro.
+        """
         return reverse("book-detail", args=[str(self.pk)])
