@@ -25,7 +25,7 @@
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Save</button>
-            <input type="button" value="List Users" onclick="window.location.href='{% url 'users'  %}'" />
+            <input type="button" value="List Users" onclick="window.location.href=`{% url 'users'  %}`" />
         </form>
     </div>
 </div>
