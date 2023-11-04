@@ -2,7 +2,8 @@
 @import 'style_book.scss';
 @import 'style_author.scss';
 @import 'style_nav.scss';
-// @import 'style_slider.scss';
+@import 'style_head.scss';
+@import 'style_slider.scss';
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap');
 
 $body-fonts: 'Press Start 2P', 'Foldit', 'Alfa Slab One', 'Permanent Marker', 'Rubik Iso', 'Caveat', 'Lilita One', 'Anton', Arial, sans-serif;
@@ -15,11 +16,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.slider{
-	width: 40%;
-	height: 40vh;
-	padding: 20px;
-}
+
 // .head {
 //     background-color: #482c0ce8;
 //     border-bottom: 0px;
