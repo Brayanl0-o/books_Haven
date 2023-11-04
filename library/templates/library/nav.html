@@ -1,5 +1,5 @@
 {%load static%}
-<link rel="stylesheet" type="text/css" href="{% static 'library/sass/style_nav.scss' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'library/css/style_index.css' %}">
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -12,11 +12,12 @@
       <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
       <div class="wrapper">
         <ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">About</a></li>
-  <li><a href="#">Services</a></li>
-  <li><a href="#">Gallery</a></li>
-  <li><a href="#">Feedback</a></li>
+  <li><a href="{% url 'index'%}">Home</a></li>
+  <li><a href="{% url 'books'%}">Libros</a></li>
+  <li><a href="{% url 'authors'%}">Autores</a></li>
+  <li><a href="{% url 'users'%}">Usuarios</a></li>
+
+
   </ul>
   </div>
 
