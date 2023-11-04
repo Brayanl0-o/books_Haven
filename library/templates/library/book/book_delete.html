@@ -1,19 +1,10 @@
 {% block content %}{%load static%}
 <link rel="stylesheet" type="text/css" href="{% static 'library/css/style_index.css' %}">
 
-<div class="head">
-    <h1><a href="{% url 'index'%}">Cuyeca </a>  </h1>
-    <h4>Virtual Library</h4>
-    <br>
-</div>
 
-<nav>
-    <ul>
-        <li><a href="{% url 'authors'%}">Authors</a></li>
-        <li><a href="{% url 'books'%}">Books</a></li>
-        <li><a href="{% url 'users'%}">Users</a></li>
-    </ul>
-</nav>
+{% include "library/nav.html" %} 
+{% include "library/head.html" %} 
+
 
 
 <div class="container">
