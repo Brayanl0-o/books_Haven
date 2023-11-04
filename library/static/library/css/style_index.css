@@ -1,427 +1,8 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap");
-body {
-  font-family: "Press Start 2P", "Foldit", "Alfa Slab One", "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One ", "Anton", Arial, sans-serif;
-  background-image: url(img/en.jpg);
-  padding-top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.head {
-  background-color: rgba(72, 44, 12, 0.9098039216);
-  border-bottom: 0px;
-  border-top: 10px solid;
-  border-left: 20px double black;
-  border-right: 20px double black;
-  padding-top: 20px;
-  background-size: cover;
-  width: 40%;
-  border-radius: 20px;
-}
-
-.head h1 {
-  font-family: "Lilita One ", "Anton", Arial, sans-serif, "Permanent Marker", "Alfa Slab One";
-  font-size: 60px;
-}
-
-.head h1,
-h4 {
-  margin-top: 0px;
-  color: #000000;
-  text-align: center;
-}
-
-nav {
-  height: 60px;
-  width: 50%;
-  font-size: 20px;
-  background-color: rgba(26, 25, 25, 0.937254902);
-  background-size: cover;
-  text-align: center;
-  border-radius: 20px 20px 20px 20px;
-}
-
-nav ul {
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  display: block;
-  padding: 10px 40px;
-  color: #000000;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-image: url(img/l-n.jfif);
-  color: rgba(212, 117, 8, 0.876);
-  background-size: cover;
-  transform: scale(1.4);
-  border-radius: 20px;
-}
-
-h2 {
-  color: #000000;
-}
-
-input[type=button] {
-  background-color: rgb(198, 99, 6);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.container {
-  border: solid;
-  border-width: 10px;
-  border-top: 0px;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(72, 44, 12, 0.7215686275);
-  margin-top: 0px;
-  min-height: 780px;
-  padding: 20px;
-  background-size: cover;
-  width: 70%;
-  align-items: center;
-}
-
-.head_cont {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 0px;
-  margin-top: 10px;
-}
-
-.head_cont h2 {
-  font-family: "Permanent Marker", Arial, sans-serif;
-  font-size: 50px;
-}
-
-.list {
-  padding: 0px;
-  align-items: center;
-  border-top: 5px double;
-  border-bottom: 5px double black;
-  max-width: 100%;
-  padding: 10px;
-  margin: 50px 0px 50px 0px;
-}
-
-.list ul {
-  margin-left: 30px;
-  list-style: none;
-  color: #000000;
-  padding: 20px;
-}
-
-.list a {
-  text-decoration: none;
-  color: rgb(198, 137, 6);
-}
-
-.list p {
-  margin-left: 0px;
-}
-
-.container .botoms {
-  gap: 10px;
-  display: flex;
-  flex-direction: row;
-}
-
-body {
-  font-family: "Press Start 2P", "Foldit", "Alfa Slab One", "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One ", "Anton", Arial, sans-serif;
-  background-image: url(img/en.jpg);
-  padding-top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.head {
-  background-color: rgba(72, 44, 12, 0.9098039216);
-  border-bottom: 0px;
-  border-top: 10px solid;
-  border-left: 20px double black;
-  border-right: 20px double black;
-  padding-top: 20px;
-  background-size: cover;
-  width: 40%;
-  border-radius: 20px;
-}
-
-.head h1 {
-  font-family: "Lilita One ", "Anton", Arial, sans-serif, "Permanent Marker", "Alfa Slab One";
-  font-size: 60px;
-}
-
-.head h1,
-h4 {
-  margin-top: 0px;
-  color: #000000;
-  text-align: center;
-}
-
-nav {
-  height: 60px;
-  width: 50%;
-  font-size: 20px;
-  background-color: rgba(26, 25, 25, 0.937254902);
-  background-size: cover;
-  text-align: center;
-  border-radius: 20px 20px 20px 20px;
-}
-
-nav ul {
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  display: block;
-  padding: 10px 40px;
-  color: #000000;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-image: url(img/l-n.jfif);
-  color: rgba(212, 117, 8, 0.876);
-  background-size: cover;
-  transform: scale(1.4);
-  border-radius: 20px;
-}
-
-h2 {
-  color: #000000;
-}
-
-input[type=button] {
-  background-color: rgb(198, 99, 6);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.container {
-  border: solid;
-  border-width: 10px;
-  border-top: 0px;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(72, 44, 12, 0.7215686275);
-  margin-top: 0px;
-  min-height: 780px;
-  padding: 20px;
-  background-size: cover;
-  width: 70%;
-  align-items: center;
-}
-
-.head_cont {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 0px;
-  margin-top: 10px;
-}
-
-.head_cont h2 {
-  font-family: "Permanent Marker", Arial, sans-serif;
-  font-size: 50px;
-}
-
-.list {
-  padding: 0px;
-  align-items: center;
-  border-top: 5px double;
-  border-bottom: 5px double black;
-  max-width: 100%;
-  padding: 10px;
-  margin: 50px 0px 50px 0px;
-}
-
-.list ul {
-  margin-left: 30px;
-  list-style: none;
-  color: #000000;
-  padding: 20px;
-}
-
-.list a {
-  text-decoration: none;
-  color: rgb(198, 137, 6);
-}
-
-.list p {
-  margin-left: 0px;
-}
-
-.container .botoms {
-  gap: 10px;
-  display: flex;
-  flex-direction: row;
-}
-
-body {
-  font-family: "Press Start 2P", "Foldit", "Alfa Slab One", "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One ", "Anton", Arial, sans-serif;
-  background-image: url(img/en.jpg);
-  padding-top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.head {
-  background-color: rgba(72, 44, 12, 0.9098039216);
-  border-bottom: 0px;
-  border-top: 10px solid;
-  border-left: 20px double black;
-  border-right: 20px double black;
-  padding-top: 20px;
-  background-size: cover;
-  width: 40%;
-  border-radius: 20px;
-}
-
-.head h1 {
-  font-family: "Lilita One ", "Anton", Arial, sans-serif, "Permanent Marker", "Alfa Slab One";
-  font-size: 60px;
-}
-
-.head h1,
-h4 {
-  margin-top: 0px;
-  color: #000000;
-  text-align: center;
-}
-
-nav {
-  height: 60px;
-  width: 50%;
-  font-size: 20px;
-  background-color: rgba(26, 25, 25, 0.937254902);
-  background-size: cover;
-  text-align: center;
-  border-radius: 20px 20px 20px 20px;
-}
-
-nav ul {
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  display: block;
-  padding: 10px 40px;
-  color: #000000;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-image: url(img/l-n.jfif);
-  color: rgba(212, 117, 8, 0.876);
-  background-size: cover;
-  transform: scale(1.4);
-  border-radius: 20px;
-}
-
-h2 {
-  color: #000000;
-}
-
-input[type=button] {
-  background-color: rgb(198, 99, 6);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.container {
-  border: solid;
-  border-width: 10px;
-  border-top: 0px;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(72, 44, 12, 0.7215686275);
-  margin-top: 0px;
-  min-height: 780px;
-  padding: 20px;
-  background-size: cover;
-  width: 70%;
-  align-items: center;
-}
-
-.head_cont {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 0px;
-  margin-top: 10px;
-}
-
-.head_cont h2 {
-  font-family: "Permanent Marker", Arial, sans-serif;
-  font-size: 50px;
-}
-
-.list {
-  padding: 0px;
-  align-items: center;
-  border-top: 5px double;
-  border-bottom: 5px double black;
-  max-width: 100%;
-  padding: 10px;
-  margin: 50px 0px 50px 0px;
-}
-
-.list ul {
-  margin-left: 30px;
-  list-style: none;
-  color: #000000;
-  padding: 20px;
-}
-
-.list a {
-  text-decoration: none;
-  color: rgb(198, 137, 6);
-}
-
-.list p {
-  margin-left: 0px;
-}
-
-.container .botoms {
-  gap: 10px;
-  display: flex;
-  flex-direction: row;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -436,8 +17,8 @@ input[type=button] {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #000;
-  clip-path: circle(25px at calc(100% - 45px) 45px);
+  background: linear-gradient(-45deg, #5f5f5f 0%, #000000 100%);
+  clip-path: circle(0px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
 }
 
@@ -446,9 +27,9 @@ input[type=button] {
 }
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 2;
-  right: 20px;
+  right: 10px;
   top: 20px;
   height: 50px;
   width: 50px;
@@ -458,16 +39,21 @@ input[type=button] {
   font-size: 20px;
   color: #fff;
   cursor: pointer;
-  background: #000;
+  background: linear-gradient(-45deg, #585858, #000000);
   transition: all 0.3s ease-in-out;
 }
 
-#active:checked ~ .menu-btn {
-  color: #fff;
+.menu-btn i::before {
+  content: "Menú";
+  font-weight: 900;
+  font-size: small;
 }
 
 #active:checked ~ .menu-btn i:before {
-  content: "\f00d";
+  content: "X";
+  color: #f3f1f1;
+  font-size: larger;
+  font-weight: 900;
 }
 
 .wrapper ul {
@@ -501,6 +87,7 @@ input[type=button] {
   position: absolute;
   content: "";
   background: #fff;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
   width: 104%;
   height: 110%;
   left: -2%;
@@ -553,6 +140,214 @@ input[type=checkbox] {
     filter: hue-rotate(360deg);
   }
 }
+.container-head {
+  width: 100%;
+  background-color: rgba(240, 255, 255, 0.719);
+}
+
+.head {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 100px;
+  width: 80%;
+  margin-right: 20%;
+}
+.head a {
+  text-align: center;
+  color: rgb(129, 129, 12);
+  text-decoration: none;
+}
+.head img {
+  padding: 10px;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  width: 100%;
+  min-height: 45rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.container {
+  z-index: -50;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 100%;
+}
+
+/* Basic appearance stuff ends here */
+/* Parallax Horizontal Scroller - by Bree Dulmage, 2020 */
+#proparallax {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  min-height: 20rem;
+  box-shadow: 0px 8px 10px 8px grey;
+}
+
+#proparallax img {
+  position: absolute;
+  width: 100%;
+  height: 37.5rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+@keyframes parallax_one { /* controls img.one movement */
+  0% { /* .imageloaded */
+    height: 37.5rem;
+    width: 100%;
+    left: 0rem;
+    opacity: 1;
+  }
+  /* .imagehold runs from 0 to 27.77% */
+  27.77% { /* .imageloaded */
+    width: 100%;
+    left: 0rem;
+  }
+  27.78% { /* .imagepreunload */
+    width: 50rem;
+    left: 0rem;
+    right: 50rem;
+  }
+  33.33% { /* .imageunloaded */
+    height: 37.5rem;
+    width: 0rem;
+    left: 0rem;
+    right: 0rem;
+    opacity: 1;
+  }
+  33.34% { /* imageoff */
+    opacity: 0;
+  }
+  94.43% { /* .imageon */
+    left: 0rem;
+    opacity: 0;
+  }
+  94.44% { /* .imageinitial */
+    height: 37.5rem;
+    width: 0rem;
+    left: 50rem;
+    opacity: 1;
+  }
+  100% { /* .imageloaded */
+    width: 50rem;
+    left: 0rem;
+    opacity: 1;
+  }
+}
+@keyframes parallax_two { /* controls img.two movement */
+  0% { /* .imageoff */
+    opacity: 0;
+  }
+  27.77% { /* .imageon */
+    left: 0rem;
+    opacity: 0;
+  }
+  27.78% { /* .imageinitial */
+    width: 100%;
+    height: 37.5rem;
+    left: 50rem;
+    opacity: 1;
+  }
+  33.33% { /* .imageloaded */
+    width: 100%;
+    left: 0rem;
+  }
+  /* .imagehold runs from 33.34% - 61.10% */
+  61.10% { /* .imageloaded */
+    width: 100%;
+    left: 0rem;
+  }
+  61.11% { /* .imagepreunload */
+    width: 50rem;
+    left: 0rem;
+    right: 50rem;
+  }
+  66.67% { /* .imageunloaded */
+    width: 0rem;
+    right: 0rem;
+    left: 0rem;
+    height: 37.5rem;
+    opacity: 1;
+  }
+  66.68% { /* .imageoff */
+    opacity: 0;
+  }
+  100% { /* .imageoff */
+    opacity: 0;
+  }
+}
+@keyframes parallax_three { /* controls img.three movement */
+  0% { /* .imageoff */
+    opacity: 0;
+  }
+  61.10% { /* .imageon */
+    opacity: 0;
+  }
+  61.11% { /* .imageinitial */
+    width: 100%;
+    height: 37.5rem;
+    left: 50rem;
+    opacity: 1;
+  }
+  66.67% { /* .imageloaded */
+    width: 100%;
+    left: 0rem;
+  }
+  /* .imagehold runs from 66.67% - 94.43% */
+  94.43% { /* .imageloaded */
+    width: 100%;
+    left: 0rem;
+  }
+  94.44% { /* .imagepreunload */
+    width: 50rem;
+    left: 0rem;
+    right: 50rem;
+  }
+  100% { /* imageunloaded */
+    width: 0rem;
+    right: 0rem;
+    left: 0rem;
+    height: 37.5rem;
+    opacity: 1;
+  }
+}
+#proparallax img.one {
+  animation-name: parallax_one; /* controls img.one movement */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 18s;
+  animation-direction: forwards;
+  object-fit: cover;
+}
+
+#proparallax img.two {
+  animation-name: parallax_two; /* controls img.two movement */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 18s;
+  animation-direction: forwards;
+  object-fit: cover;
+}
+
+#proparallax img.three {
+  animation-name: parallax_three; /* controls img.three movement */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 18s;
+  animation-direction: forwards;
+  object-fit: cover;
+}
+
 body {
   font-family: "Press Start 2P", "Foldit", "Alfa Slab One", "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One", "Anton", Arial, sans-serif;
   background-color: darkgrey;
@@ -560,238 +355,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.head {
-  background-color: rgba(72, 44, 12, 0.9098039216);
-  border-bottom: 0px;
-  border-top: 10px solid;
-  border-left: 20px double black;
-  border-right: 20px double black;
-  padding-top: 20px;
-  background-size: cover;
-  width: 40%;
-  border-radius: 20px;
-}
-.head h1 {
-  font-family: "Lilita One", "Anton", Arial, sans-serif, "Permanent Marker", "Alfa Slab One";
-  font-size: 60px;
-}
-.head h1, .head h4 {
-  margin-top: 0px;
-  color: #000000;
-  text-align: center;
-}
-
-h2 {
-  color: #000000;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-input[type=button] {
-  background-color: #0066cc;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.container {
-  border: solid;
-  border-width: 10px;
-  border-top: 0px;
-  border-radius: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(72, 44, 12, 0.7215686275);
-  margin: 0 auto;
-  margin-top: 0px;
-  min-height: 780px;
-  padding: 20px;
-  background-size: cover;
-  width: 70%;
-}
-.container .head_cont {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-.container .head_cont h1 {
-  font-family: "Permanent Marker", Arial, sans-serif;
-  font-size: 60px;
-  margin: 0px 0px 0px 0px;
-  overscroll-behavior-block: red;
-}
-.container .descr p {
-  text-align: center;
-  font-size: 25px;
-  padding: 10px;
-  width: auto;
-  border-top: 5px double;
-  border-right: 5px solid black;
-  border-left: 5px solid black;
-  margin-bottom: 30px;
-}
-.container .books-section {
-  flex: 2;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 5px double;
-  border-right: 5px solid black;
-  border-bottom: 5px double black;
-  max-width: 70%;
-}
-.container .books-section h2 {
-  margin: 0px 0px 0px 0px;
-  font-family: "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One", "Anton", Arial, sans-serif;
-  font-size: 50px;
-}
-.container .books-section ul li {
-  font-size: 12px;
-  margin: 0px 0px 0px 0px;
-  padding: 10px;
-}
-.container .books-section hr.line-img {
-  width: 600px;
-  height: 200px;
-  background-image: url("img/libr.jpg");
-  background-repeat: repeat-x;
-  background-position: center;
-  border: none;
-  border-radius: 20px;
-}
-.container .books-section hr.line1 {
-  border-color: #0066cc;
-  width: 400px;
-}
-.container .books-section hr.line2 {
-  border-color: #0066cc;
-  width: 300px;
-}
-.container .books-section hr.line3 {
-  border-color: #0066cc;
-  width: 400px;
-}
-.container .books-section hr.line4 {
-  border-color: #0066cc;
-  width: 300px;
-}
-.container .authors-section {
-  padding: 20px;
-  border-top: 5px double;
-  border-bottom: 5px double black;
-  margin-top: 50px;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 0;
-  align-items: center;
-}
-.container .authors-section h2 {
-  margin: 0px 0px 0px 0px;
-  font-family: "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One", "Anton", Arial, sans-serif;
-  font-size: 50px;
-}
-.container .authors-section hr.line-img {
-  width: 400px;
-  height: 200px;
-  background-image: url("img/lse.jfif");
-  background-repeat: repeat-x;
-  background-position: center;
-  border: none;
-  border-radius: 70px;
-}
-.container .authors-section hr.line1 {
-  border-color: #0066cc;
-  width: 400px;
-}
-.container .authors-section hr.line2 {
-  border-color: #0066cc;
-  width: 300px;
-}
-.container .authors-section hr.line3 {
-  border-color: #0066cc;
-  width: 400px;
-}
-.container .authors-section hr.line4 {
-  border-color: #0066cc;
-  width: 300px;
-}
-.container .authors-section ul li {
-  flex: 1;
-  padding: 20px;
-  margin-right: 20px;
-}
-.container .users-section {
-  flex: 1;
-  padding: 20px;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 5px solid black;
-  max-width: 700px;
-}
-.container .users-section h2 {
-  margin: 0px 0px 0px 0px;
-  font-family: "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One", "Anton", Arial, sans-serif;
-  font-size: 50px;
-}
-.container .users-section hr.line-img {
-  width: 400px;
-  height: 200px;
-  background-image: url("img/users.png");
-  background-repeat: repeat-x;
-  background-position: center;
-  border: none;
-  border-radius: 50%;
-}
-.container .users-section ul li {
-  margin-bottom: 10px;
-}
-.container .users-section hr.line1 {
-  border-color: #0066cc;
-  width: 400px;
-}
-.container .users-section hr.line2 {
-  border-color: #0066cc;
-  width: 300px;
-}
-.container .users-section hr.line3 {
-  border-color: #0066cc;
-  width: 400px;
-}
-.container .users-section hr.line4 {
-  border-color: #0066cc;
-  width: 300px;
-}
-.container .future-section {
-  flex: 1;
-  padding: 20px;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 700px;
-}
-.container .future-section h1 {
-  margin: 0px 0px 0px 0px;
-  font-family: "Rubik Iso", "Caveat", "Lilita One", "Anton", Arial, sans-serif;
-  font-size: 50px;
 }
 
 /*# sourceMappingURL=style_index.css.map */
