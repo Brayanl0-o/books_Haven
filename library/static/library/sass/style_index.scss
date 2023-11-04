@@ -1,6 +1,7 @@
 @import 'style_detail.scss';
 @import 'style_book.scss';
 @import 'style_author.scss';
+@import 'style_nav.scss';
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap');
 
 $body-fonts: 'Press Start 2P', 'Foldit', 'Alfa Slab One', 'Permanent Marker', 'Rubik Iso', 'Caveat', 'Lilita One', 'Anton', Arial, sans-serif;
@@ -37,41 +38,41 @@ body {
     }
 }
 
-nav {
-    height: 60px;
-    width: 50%;
-    font-size: 20px;
-    background-color: #1a1919ef;
-    background-size: cover;
-    text-align: center;
-    border-radius: 20px 20px 20px 20px;
+// nav {
+//     height: 60px;
+//     width: 50%;
+//     font-size: 20px;
+//     background-color: #1a1919ef;
+//     background-size: cover;
+//     text-align: center;
+//     border-radius: 20px 20px 20px 20px;
     
-    ul {
-        list-style-type: none;
-        margin: 0;
-        margin-top: 10px;
-        padding: 0;
-    }
+//     ul {
+//         list-style-type: none;
+//         margin: 0;
+//         margin-top: 10px;
+//         padding: 0;
+//     }
     
-    ul li {
-        display: inline-block;
+//     ul li {
+//         display: inline-block;
         
-        a {
-            display: block;
-            padding: 10px 40px;
-            color: #000000;
-            text-decoration: none;
+//         a {
+//             display: block;
+//             padding: 10px 40px;
+//             color: #000000;
+//             text-decoration: none;
             
-            &:hover {
-                background-image: url('img/l-n.jfif');
-                color: rgba(218, 65, 0, 0.876);
-                background-size: cover;
-                transform: scale(1.4);
-                border-radius: 20px;
-            }
-        }
-    }
-}
+//             &:hover {
+//                 background-image: url('img/l-n.jfif');
+//                 color: rgba(218, 65, 0, 0.876);
+//                 background-size: cover;
+//                 transform: scale(1.4);
+//                 border-radius: 20px;
+//             }
+//         }
+//     }
+// }
 
 h2 {
     color: #000000;
