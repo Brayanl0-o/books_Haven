@@ -1,0 +1,322 @@
+@import 'style_detail.scss';
+@import 'style_book.scss';
+@import 'style_author.scss';
+@import 'style_nav.scss';
+// @import 'style_slider.scss';
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap');
+
+$body-fonts: 'Press Start 2P', 'Foldit', 'Alfa Slab One', 'Permanent Marker', 'Rubik Iso', 'Caveat', 'Lilita One', 'Anton', Arial, sans-serif;
+
+body {
+    font-family: $body-fonts;
+    background-color: darkgrey;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider{
+	width: 40%;
+	height: 40vh;
+	padding: 20px;
+}
+// .head {
+//     background-color: #482c0ce8;
+//     border-bottom: 0px;
+//     border-top: 10px solid;
+//     border-left: 20px double black;
+//     border-right: 20px double black;
+//     padding-top: 20px;
+//     background-size: cover;
+//     width: 40%;
+//     border-radius: 20px;
+    
+//     h1 {
+//         font-family: 'Lilita One', 'Anton', Arial, sans-serif, 'Permanent Marker', 'Alfa Slab One';
+//         font-size: 60px;
+//     }
+    
+//     h1, h4 {
+//         margin-top: 0px;
+//         color: #000000;
+//         text-align: center;
+//     }
+// }
+
+// // nav {
+// //     height: 60px;
+// //     width: 50%;
+// //     font-size: 20px;
+// //     background-color: #1a1919ef;
+// //     background-size: cover;
+// //     text-align: center;
+// //     border-radius: 20px 20px 20px 20px;
+    
+// //     ul {
+// //         list-style-type: none;
+// //         margin: 0;
+// //         margin-top: 10px;
+// //         padding: 0;
+// //     }
+    
+// //     ul li {
+// //         display: inline-block;
+        
+// //         a {
+// //             display: block;
+// //             padding: 10px 40px;
+// //             color: #000000;
+// //             text-decoration: none;
+            
+// //             &:hover {
+// //                 background-image: url('img/l-n.jfif');
+// //                 color: rgba(218, 65, 0, 0.876);
+// //                 background-size: cover;
+// //                 transform: scale(1.4);
+// //                 border-radius: 20px;
+// //             }
+// //         }
+// //     }
+// // }
+
+// h2 {
+//     color: #000000;
+// }
+
+// ul {
+//     list-style: none;
+//     padding: 0;
+// }
+
+// a {
+//     text-decoration: none;
+//     color: #000000;
+// }
+
+// input[type="button"] {
+//     background-color: #0066cc;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border: none;
+//     cursor: pointer;
+// }
+
+// .container {
+//     border: solid;
+//     border-width: 10px;
+//     border-top: 0px;
+//     border-radius: 100px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     background-color: #482c0cb8;
+//     margin: 0 auto;
+//     margin-top: 0px;
+//     min-height: 780px;
+//     padding: 20px;
+//     background-size: cover;
+//     width: 70%;
+    
+//     .head_cont {
+//         text-align: center;
+//         width: 100%;
+//         margin-bottom: 10px;
+//         margin-top: 10px;
+        
+//         h1 {
+//             font-family: 'Permanent Marker', Arial, sans-serif;
+//             font-size: 60px;
+//             margin: 0px 0px 0px 0px;
+//             overscroll-behavior-block: red;
+//         }
+//     }
+    
+//     .descr {
+//         p {
+//             text-align: center;
+//             font-size: 25px;
+//             padding: 10px;
+//             width: auto;
+//             border-top: 5px double;
+//             border-right: 5px solid black;
+//             border-left: 5px solid black;
+//             margin-bottom: 30px;
+//         }
+//     }
+    
+//     .books-section {
+//         flex: 2;
+//         padding: 10px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         border-top: 5px double;
+//         border-right: 5px solid black;
+//         border-bottom: 5px double black;
+//         max-width: 70%;
+        
+//         h2 {
+//             margin: 0px 0px 0px 0px;
+//             font-family: 'Permanent Marker', 'Rubik Iso', 'Caveat', 'Lilita One', 'Anton', Arial, sans-serif;
+//             font-size: 50px;
+//         }
+        
+//         ul li {
+//             font-size: 12px;
+//             margin: 0px 0px 0px 0px;
+//             padding: 10px;
+//         }
+        
+//         hr.line-img {
+//             width: 600px;
+//             height: 200px;
+//             background-image: url('img/libr.jpg');
+//             background-repeat: repeat-x;
+//             background-position: center;
+//             border: none;
+//             border-radius: 20px;
+//         }
+        
+//         hr.line1 {
+//             border-color: #0066cc;
+//             width: 400px;
+//         }
+        
+//         hr.line2 {
+//             border-color: #0066cc;
+//             width: 300px;
+//         }
+        
+//         hr.line3 {
+//             border-color: #0066cc;
+//             width: 400px;
+//         }
+        
+//         hr.line4 {
+//             border-color: #0066cc;
+//             width: 300px;
+//         }
+//     }
+    
+//     .authors-section {
+//         padding: 20px;
+//         border-top: 5px double;
+//         border-bottom: 5px double black;
+//         margin-top: 50px;
+//         margin-right: 20px;
+//         display: flex;
+//         flex-direction: column;
+//         flex-grow: 1;
+//         flex-basis: 0;
+//         align-items: center;
+        
+//         h2 {
+//             margin: 0px 0px 0px 0px;
+//             font-family: 'Permanent Marker', 'Rubik Iso', 'Caveat', 'Lilita One', 'Anton', Arial, sans-serif;
+//             font-size: 50px;
+//         }
+        
+//         hr.line-img {
+//             width: 400px;
+//             height: 200px;
+//             background-image: url('img/lse.jfif');
+//             background-repeat: repeat-x;
+//             background-position: center;
+//             border: none;
+//             border-radius: 70px;
+//         }
+        
+//         hr.line1 {
+//             border-color: #0066cc;
+//             width: 400px;
+//         }
+        
+//         hr.line2 {
+//             border-color: #0066cc;
+//             width: 300px;
+//         }
+        
+//         hr.line3 {
+//             border-color: #0066cc;
+//             width: 400px;
+//         }
+        
+//         hr.line4 {
+//             border-color: #0066cc;
+//             width: 300px;
+//         }
+        
+//         ul li {
+//             flex: 1;
+//             padding: 20px;
+//             margin-right: 20px;
+//         }
+//     }
+    
+//     .users-section {
+//         flex: 1;
+//         padding: 20px;
+//         margin-right: 20px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         border-right: 5px solid black;
+//         max-width: 700px;
+        
+//         h2 {
+//             margin: 0px 0px 0px 0px;
+//             font-family: 'Permanent Marker', 'Rubik Iso', 'Caveat', 'Lilita One', 'Anton', Arial, sans-serif;
+//             font-size: 50px;
+//         }
+        
+//         hr.line-img {
+//             width: 400px;
+//             height: 200px;
+//             background-image: url('img/users.png');
+//             background-repeat: repeat-x;
+//             background-position: center;
+//             border: none;
+//             border-radius: 50%;
+//         }
+        
+//         ul li {
+//             margin-bottom: 10px;
+//         }
+        
+//         hr.line1 {
+//             border-color: #0066cc;
+//             width: 400px;
+//         }
+        
+//         hr.line2 {
+//             border-color: #0066cc;
+//             width: 300px;
+//         }
+        
+//         hr.line3 {
+//             border-color: #0066cc;
+//             width: 400px;
+//         }
+        
+//         hr.line4 {
+//             border-color: #0066cc;
+//             width: 300px;
+//         }
+//     }
+    
+//     .future-section {
+//         flex: 1;
+//         padding: 20px;
+//         margin-right: 20px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         max-width: 700px;
+        
+//         h1 {
+//             margin: 0px 0px 0px 0px;
+//             font-family: 'Rubik Iso', 'Caveat', 'Lilita One', 'Anton', Arial, sans-serif;
+//             font-size: 50px;
+//         }
+//     }
+// }
