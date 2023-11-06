@@ -1,5 +1,15 @@
+{% extends 'layout.html' %}
+
 {%load static%}
-<!DOCTYPE html>
+
+{% block title %}Cuyeca Books{% endblock %}
+
+{% block content %}
+    <h1>Título de la página</h1>
+    <p>Contenido de la página.</p>
+{% endblock %}
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +22,7 @@
     
     {% include "library/head.html" %}
    
-    {% include "library/slider.html" %} 
+    {% include "library/slider.html" %}  -->
 
     
     <!-- <div class="slider">
@@ -90,5 +100,4 @@
             <H1>FUTURE SECTION</H1>
         </div>
     </div> -->
-</body>
-</html>
+
