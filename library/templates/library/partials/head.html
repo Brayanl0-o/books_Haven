@@ -1,0 +1,17 @@
+{%load static %}
+
+<div class="container-head" >
+    <div class="head">
+        <a href="{% url 'index' %}">
+            <img  src="{% static 'library/img/logo.png' %}"  width="80" height="70" alt="Logo">
+        </a>
+        <a href="{% url 'index' %}">
+            <h1> Cuyeca </h1>
+            <h4>Virtual Library</h4>
+        </a>
+        <div>
+            {% include "library/partials/nav.html"%}
+        </div>
+    </div>
+</div>
+<hr width="100%" color="black" size="10px">
