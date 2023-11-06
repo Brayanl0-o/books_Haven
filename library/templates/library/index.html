@@ -2,12 +2,15 @@
 
 {%load static%}
 
-{% block title %}Cuyeca Books{% endblock %}
+{% block title %}Inicio - Biblioteca Cuyeca{% endblock %}
 
-{% block content %}
-    <h1>Título de la página</h1>
-    <p>Contenido de la página.</p>
+
+{% block categories %}
+        {% include "library/home/categories.html" %}
 {% endblock %}
+
+
+
 
 <!-- <!DOCTYPE html>
 <html lang="en">
