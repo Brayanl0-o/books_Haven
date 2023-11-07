@@ -8,6 +8,7 @@
 }
 
 .wrapper {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,12 +25,13 @@
 
 #active:checked ~ .wrapper {
   clip-path: circle(75%);
+  
 }
 
 .menu-btn {
  
   position: fixed;
-  z-index: 2;
+  z-index: 101;
   right: 10px;
   // left: 20px;
   top: 10px;
