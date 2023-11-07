@@ -13,22 +13,24 @@
 </head>
 <body>
         {% block head %}
-        {% include "library/partials/head.html" %}
+            {% include "library/partials/head.html" %}
         {% endblock %}
 
 
         {% block slider %}
-        {% include "library/partials/slider.html" %} 
+            {% include "library/partials/slider.html" %} 
         {% endblock %}
       
         {% block categories %}
         {% endblock %}
-  
+
+        {% block new_books %}
+        {% endblock %}
+        
         {% block content %}
         {% endblock %}
   
 
-  
         {% block footer %}  
             {% include "library/partials/footer.html" %}
         {% endblock %}
