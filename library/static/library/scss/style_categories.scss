@@ -1,0 +1,15 @@
+.categories-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    min-width: 100%;
+    width: 100vh;
+    background-color: aqua;
+    height: 10vh;
+    
+    .box{
+        width: 100%;
+        background-color: brown;
+        border: 1px solid gray
+    }
+}
