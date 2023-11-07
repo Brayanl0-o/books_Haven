@@ -2,14 +2,17 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    min-width: 100%;
+    min-width: 80%;
     width: 100vh;
-    background-color: aqua;
-    height: 10vh;
+    // background-color: aqua;
+    height: auto;
     
     .box{
+        padding: 1rem;
         width: 100%;
-        background-color: brown;
-        border: 1px solid gray
+        background-color: rgba(184, 184, 184, 0);
+        box-shadow: 1px black ;
+        border-left: 1px  solid rgb(255, 255, 255);
+        border-right: 1px  solid rgb(255, 255, 255)
     }
 }
