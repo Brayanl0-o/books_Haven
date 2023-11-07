@@ -26,10 +26,11 @@
 
         {% block new_books %}
         {% endblock %}
-        
-        {% block content %}
-        {% endblock %}
   
+        {% block new_authors %}
+            {% include "library/home/new_authors.html" %}
+        {% endblock %}
+
 
         {% block footer %}  
             {% include "library/partials/footer.html" %}
