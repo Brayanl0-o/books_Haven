@@ -1,0 +1,39 @@
+.container-head{
+    width: 100%;
+    background-color: $primary-background-color;
+
+}
+.head{
+ 
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 93%;
+    // margin-right: 10%;
+    // margin: 0 auto; /* Utiliza margen automático en lugar de margen derecho */
+    // max-width: 80%; /* Limita el ancho al 80% del contenedor padre */
+   
+    a{
+        text-align: center;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        h1{
+            font-size: 2.5rem;
+            font-family: $body-fonts;
+            color: rgb(0, 0, 0);
+        }
+        h2{
+            font-size: medium;
+            font-family: $body-fonts;
+            color: $text-color-secondary;
+        }
+    }
+   
+    img{
+        padding: 10px;
+    }
+
+
+}
