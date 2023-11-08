@@ -142,7 +142,7 @@ input[type=checkbox] {
 }
 .container-head {
   width: 100%;
-  background-color: rgba(240, 255, 255, 0.719);
+  background-color: #f6f6f6;
 }
 
 .head {
@@ -155,8 +155,18 @@ input[type=checkbox] {
 }
 .head a {
   text-align: center;
-  color: rgb(129, 129, 12);
+  color: rgb(0, 0, 0);
   text-decoration: none;
+}
+.head a h1 {
+  font-size: 2.5rem;
+  font-family: "Noto Serif", serif;
+  color: rgb(0, 0, 0);
+}
+.head a h2 {
+  font-size: medium;
+  font-family: "Noto Serif", serif;
+  color: chocolate;
 }
 .head img {
   padding: 10px;
@@ -373,7 +383,7 @@ section#container-new-books {
 section#container-new-books h4 {
   font-size: 3rem;
   text-align: left;
-  color: blue;
+  color: chocolate;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -537,12 +547,12 @@ footer .end span {
 }
 
 body {
-  font-family: "Press Start 2P", "Foldit", "Alfa Slab One", "Permanent Marker", "Rubik Iso", "Caveat", "Lilita One", "Anton", Arial, sans-serif;
-  background-color: darkgrey;
-  min-width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Noto Serif", serif;
+  background-color: #bdbdbd;
+  min-width: 100vh;
 }
 
 /*# sourceMappingURL=style_index.css.map */
