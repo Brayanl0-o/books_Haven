@@ -375,27 +375,24 @@ body {
 section#container-new-books {
   display: flex;
   flex-flow: column wrap;
-  justify-content: flex-start;
-  margin-top: 5%;
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 section#container-new-books h4 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: left;
   color: chocolate;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 .wrapper-card {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 5%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 5%;
 }
 
 .card {
@@ -479,6 +476,50 @@ section#container-new-books h4 {
   transition: all 0.5s ease-in-out;
 }
 
+section#container-new-authors {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #fff;
+  margin-top: 4rem;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+section#container-new-authors h4 {
+  border: 1px solid #000000;
+  font-size: 1.5rem;
+  text-align: left;
+  color: #4c848e;
+  padding: 1rem;
+  background-color: #000000;
+}
+section#container-new-authors .card-authors {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0.5rem;
+  margin: auto;
+  overflow-y: auto;
+  max-height: 65vh;
+}
+section#container-new-authors .card-authors .authors {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+section#container-new-authors .card-authors .authors img {
+  border-radius: 50%;
+}
+section#container-new-authors .card-authors .description {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
 footer {
   background-color: rgb(207, 123, 13);
   min-width: auto;
@@ -553,6 +594,20 @@ body {
   font-family: "Noto Serif", serif;
   background-color: #bdbdbd;
   min-width: 100vh;
+}
+body #new_books {
+  width: 70%;
+}
+body #new_authors {
+  width: 25%;
+}
+
+#content-container {
+  margin-top: 2rem;
+  padding: 0 10rem 0 10rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style_index.css.map */
