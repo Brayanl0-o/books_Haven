@@ -7,6 +7,7 @@
 @import 'home/style_slider.scss';
 @import 'home/style_categories.scss';
 @import 'home/style_new_books.scss';
+@import 'home/style_new_authors.scss';
 @import 'shared/style_footer.scss';
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Caveat:wght@400;600;700&family=Foldit:wght@100;400;500;600;700&family=Lilita+One&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Iso&display=swap');
 
@@ -18,7 +19,24 @@ body {
     font-family: $body-fonts;
     background-color: $secondary-background-color;
     min-width: 100vh;
+
+    #new_books {
+        width: 70%;
+
+    }
+    #new_authors {
+        width: 25%; 
+    }
 }
+#content-container {
+    margin-top: 2rem;
+    padding:0 10rem 0 10rem;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+    // background-color: red;
+}
+
 
 // .head {
 //     background-color: #482c0ce8;
