@@ -1,0 +1,53 @@
+section#container-new-authors{
+
+    display: flex;
+    flex-flow: column wrap;
+    // background-color: bisque;
+    background-color: $secondary-color;
+    margin-top: 4rem;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    // max-height: 40%;
+
+    h4{
+        border: 1px solid $primary-color ;
+        font-size: 1.5rem;
+        text-align: left;
+        color: $text-color-primary;
+        padding: 1rem;
+        background-color: $primary-color;
+    }
+
+    .card-authors{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        max-width: 100%;
+        padding: 0.5rem;
+        margin: auto;
+        overflow-y: auto;
+        max-height: 65vh;
+
+        .authors{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                border-radius: 50%;
+                
+            }
+        }
+        .description{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            margin:1rem;
+            // max-width: 100%;
+        }
+    }
+}
+
