@@ -1,22 +1,16 @@
 section#container-new-books{
-    
     display: flex;
     flex-flow: column wrap;
     // background-color: bisque;
-    justify-content: flex-start;
-    margin-top: 5%; 
-    width: 80%;
+    width: 100%;
     height: auto;
 
     h4{
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: left;
         color: $text-color-secondary;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-
+        padding: 1rem;
     }
-    
 }
 
 .wrapper-card{
@@ -24,14 +18,14 @@ section#container-new-books{
     // top:80%;
     // left:0%;
     // transform: translate(-50%, -50%);
-    width:100%;
-    max-width: 100%;
-    margin-bottom: 5%;
+    // background-color: aliceblue;
     height:auto;
     display: flex;
     flex-wrap: wrap;
-    // background-color: aliceblue;
     justify-content:space-evenly;
+    width:100%;
+    max-width: 100%;
+    margin-bottom: 5%;
     
 }
 .card{
@@ -41,7 +35,6 @@ section#container-new-books{
     height: 300px;
     background: #fff;
     box-shadow: 10px 10px rgb(50, 51, 51);
-
     border: 2px solid #fff;
     cursor: pointer;
     transition: all .5s cubic-bezier(.8,.5,.2,1.4);
