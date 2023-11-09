@@ -23,14 +23,13 @@
       
         {% block categories %}
         {% endblock %}
-
-        {% block new_books %}
-        {% endblock %}
-  
-        {% block new_authors %}
-            {% include "library/home/new_authors.html" %}
-        {% endblock %}
-
+        <div id="content-container">
+            {% block new_books %}
+            {% endblock %}
+    
+            {% block new_authors %}
+            {% endblock %}
+        </div>
 
         {% block footer %}  
             {% include "library/partials/footer.html" %}
