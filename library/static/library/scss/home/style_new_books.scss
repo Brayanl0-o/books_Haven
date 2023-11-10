@@ -26,7 +26,7 @@ section#container-new-books{
     width:100%;
     max-width: 100%;
     margin-bottom: 5%;
-    
+
 }
 .card{
     flex: 1;
@@ -41,6 +41,7 @@ section#container-new-books{
     overflow: hidden;
     position: relative;
     margin-top: 3%;
+    text-decoration: none;
 }
 .card img{
     width: 100%;
@@ -58,7 +59,17 @@ section#container-new-books{
     padding: 20px;
     box-sizing: border-box;
     clip-path: circle(0% at 100% 100%);
+    
+    p{
+        font-size: 0.8rem;
+        line-height: 24px;
+        height: 70%;
+        color: #000000;
+    }
+
 }
+
+
 .card:hover .descriptions{
     left:0px;
     transition: all .7s ease-in-out;
@@ -79,10 +90,7 @@ section#container-new-books{
     letter-spacing: 1px;
     margin: 0px;
 }
-.card p{
-    line-height: 24px;
-    height: 70%;
-}
+
 .card button{
     width: fit-content;
     height: 40px;
