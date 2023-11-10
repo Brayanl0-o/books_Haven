@@ -1,28 +1,52 @@
-{% block content %}{%load static%}
-<link rel="stylesheet" type="text/css" href="{% static 'library/css/style_index.css' %}">
 
+{% extends 'layout.html' %}
+{%load static%}
+{% block book_list %}
 
-{% include "library/head.html" %} 
+<section id="container-books">
 
+    <h4>Lista de Libros &#129179;</h4>
+    {% if book_list%}
 
-<div class="container">
-    <div class="head_cont">
-        <h2>List of Books</h2>
-    </div>
-    <div class="list">
-        <ul>
-            {% for book in book_list %}
-            <li><a href="{% url 'book-detail' pk=book.pk %}">{{ book.name }} -- {{ book.author}} --
-                    {{book.release_date}}</a>
-            </li>
-            {% empty %}
-            <li>No books available.</li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="botoms">
-        <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
-        <input type="button" value="Create new book" onclick="window.location.href=`{% url 'create-book' %}`" />
-    </div>
+    <div class="wrapper-card">
+        {% for book in book_list %}
+        <div class="card">
+            <a href="{% url 'book-detail' pk=book.pk %}">
+            <img src="https://www.anagrama-ed.es/uploads/media/portadas/0001/14/5c349dad5ad0751ca7276258d6d954b6b3668c8a.jpeg" width="50" height="50" alt="Portada del libro"> 
+            <div class="descriptions">
+                <h1> {{ book.name }}</h1>
+                <p>        
+                    <ul>
+                
+                        <li>
+                            {{ book.author}}    
+                        </li>
+                        <li>
+                            {{book.release_date}}           
+                        </li>
+
+                        
+                    </ul>
+                </p>
+                <button>
+                    <i class="fab fa-youtube"></i>
+                    Play trailer on YouTube
+                </button>
+            </div>
+            </a>
+
+        </div>
+
+        {% empty %}
+             <span>No books available.</span>
+    {% endfor %}
+    {% endif %}
+
+</section>
+<div class="botoms">
+    <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
+    <input type="button" value="Create new book" onclick="window.location.href=`{% url 'create-book' %}`" />
 </div>
+
+   
 {% endblock %}
