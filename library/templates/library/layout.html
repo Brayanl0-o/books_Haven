@@ -18,7 +18,6 @@
 
 
         {% block slider %}
-            {% include "library/partials/slider.html" %} 
         {% endblock %}
       
         {% block categories %}
@@ -31,6 +30,22 @@
             {% endblock %}
         </div>
 
+
+        {% block book_list %}
+        {% endblock %}
+        {% block book_detail %}
+        {% endblock %}
+        {% block book_create %}
+        {% endblock %}
+
+        
+        {% block author_list %}
+        {% endblock %}
+        {% block author_detail %}
+        {% endblock %}
+        {% block author_create %}
+        {% endblock %}
+        
         {% block footer %}  
             {% include "library/partials/footer.html" %}
         {% endblock %}
