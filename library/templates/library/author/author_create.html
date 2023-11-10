@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block author_create %}{%load static%}
+
+
+
+<div class="container_create_author">
+    <div class="head_cont">
+        <h1>Enter Author Data: </h1>
+    </div>
+    <div class="botoms">
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit">Save</button>
+            <input type="button" value="List Authors" onclick="window.location.href=`{% url 'authors' %}`" />
+            <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
+        </form>
+    </div>
+</div>
+{% endblock %}
