@@ -1,12 +1,10 @@
-{% block content %}{%load static%}
-<link rel="stylesheet" type="text/css" href="{% static 'library/css/style_index.css' %}">
-
-
-{% include "library/head.html" %} 
+{%extends 'layout.html'%}
+{%load static%}
+{% block author_list %}
 
 
 
-<div class="container">
+<div class="container-author-list">
     <div class="head_cont">
         <h2>List Authors</h2>
     </div>
