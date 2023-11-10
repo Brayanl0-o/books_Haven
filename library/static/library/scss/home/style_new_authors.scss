@@ -29,12 +29,15 @@ section#container-new-authors{
         overflow-y: auto;
         max-height: 65vh;
 
+    
         .authors{
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-
+        
+        
+            
             img{
                 border-radius: 50%;
                 
