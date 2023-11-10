@@ -1,9 +1,5 @@
-{% block content %}{%load static%}
-<link rel="stylesheet" type="text/css" href="{% static 'library/css/style_index.css' %}">
-
-
-{% include "library/head.html" %} 
-
+{%load static%}
+{% block book_detail %}
 
 
 <div class="container">
@@ -27,4 +23,5 @@
         <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
     </div>
 </div>
+
 {% endblock %}
