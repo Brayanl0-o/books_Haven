@@ -39,7 +39,7 @@ class BookCreateView(generic.CreateView):
         'number_pages',
         'summary'
     ]
-    template_name = 'library/book/book_form.html'
+    template_name = 'library/book/book_create.html'
 
 
 class BookEditView(UpdateView):
