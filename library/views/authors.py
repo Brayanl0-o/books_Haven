@@ -37,7 +37,7 @@ class AuthorCreateView(generic.CreateView):
         'death_date',
         'books'
     ]
-    template_name = 'library/author/author_form.html'
+    template_name = 'library/author/author_create.html'
 
 
 class AuthorEditView(UpdateView):
