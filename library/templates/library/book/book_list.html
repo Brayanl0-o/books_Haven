@@ -15,22 +15,19 @@
             <img src="https://www.anagrama-ed.es/uploads/media/portadas/0001/14/5c349dad5ad0751ca7276258d6d954b6b3668c8a.jpeg" width="50" height="50" alt="Portada del libro"> 
             <div class="descriptions">
                 <h1> {{ book.name }}</h1>
-                <p>        
-                    <ul>
+                <p>
+                    {{book.summary}}
+            
+                    <br><br>
+                    {{ book.author}}    
+                    <br><br>
                 
-                        <li>
-                            {{ book.author}}    
-                        </li>
-                        <li>
-                            {{book.release_date}}           
-                        </li>
-
-                        
-                    </ul>
+                    {{book.release_date}}           
+                
                 </p>
                 <button>
                     <i class="fab fa-youtube"></i>
-                    Play trailer on YouTube
+                    Leer mas...
                 </button>
             </div>
             </a>
