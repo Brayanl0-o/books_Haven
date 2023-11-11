@@ -5,7 +5,6 @@
 section#container-books {
   display: flex;
   flex-flow: column wrap;
-  background-color: bisque;
   width: 60%;
   height: auto;
 }
@@ -492,6 +491,10 @@ section#container-new-books h4 {
   text-align: left;
   color: chocolate;
   padding: 1rem;
+  max-height: 100px; /* Altura máxima de la descripción */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) si se corta el texto */
+  white-space: nowrap; /* Evita saltos de línea */
 }
 
 .wrapper-card {
@@ -512,6 +515,7 @@ section#container-new-books h4 {
   background: #fff;
   box-shadow: 10px 10px rgb(50, 51, 51);
   border: 2px solid #fff;
+  border-radius: 10px 4px 4px 10px;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   overflow: hidden;
@@ -538,11 +542,23 @@ section#container-new-books h4 {
   box-sizing: border-box;
   clip-path: circle(0% at 100% 100%);
 }
+.descriptions h1 {
+  font-size: 1rem;
+}
 .descriptions p {
-  font-size: 0.8rem;
-  line-height: 24px;
-  height: 70%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 13; /* Número de líneas a mostrar antes del recorte */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  background-color: rgba(124, 124, 124, 0.199);
+  font-size: 0.9rem;
+  line-height: 15px;
+  text-align: left;
+  height: 75%;
+  margin: 5px;
   color: #000000;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) si se corta el texto */
 }
 
 .card:hover .descriptions {
@@ -571,12 +587,13 @@ section#container-new-books h4 {
 
 .card button {
   width: fit-content;
-  height: 40px;
+  height: 30px;
+  padding: 0.5rem;
   cursor: pointer;
   border-style: none;
   background-color: #ff3838;
   color: #fff;
-  font-size: 15px;
+  font-size: 0.8rem;
   outline: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   transition: all 0.5s ease-in-out;
@@ -595,24 +612,34 @@ section#container-new-authors {
   width: auto;
   height: auto;
   max-width: 100%;
+  text-decoration: none;
 }
 section#container-new-authors h4 {
   border: 1px solid #000000;
   font-size: 1.5rem;
   text-align: left;
-  color: #4c848e;
+  color: #fff;
   padding: 1rem;
   background-color: #000000;
+  border: 0.2rem solid transparent;
+  border-image: linear-gradient(5deg, #444, #838383, #c7c7c7) 1;
 }
 section#container-new-authors .card-authors {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  max-width: 100%;
-  padding: 0.5rem;
+  width: auto;
+  min-width: 100%;
+  padding: 1rem;
   margin: auto;
   overflow-y: auto;
   max-height: 65vh;
+  border: 0.2rem solid transparent;
+  border-top: none;
+  border-image: linear-gradient(5deg, #000000, #000000, #a5a5a5) 1;
+}
+section#container-new-authors .card-authors a {
+  text-decoration: none;
 }
 section#container-new-authors .card-authors .authors {
   display: flex;
@@ -623,12 +650,31 @@ section#container-new-authors .card-authors .authors {
 section#container-new-authors .card-authors .authors img {
   border-radius: 50%;
 }
-section#container-new-authors .card-authors .description {
+section#container-new-authors .card-authors .authors .description {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   margin: 1rem;
+  color: black;
+}
+section#container-new-authors .card-authors .authors .description p {
+  padding-top: 5px;
+}
+section#container-new-authors .card-authors .authors .button {
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px;
+  width: auto;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+section#container-new-authors .card-authors .authors .button span {
+  display: none;
+  color: red;
 }
 
 footer {
@@ -649,9 +695,11 @@ footer .container-footer {
   color: wheat;
 }
 footer .container-footer section#container-description {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   text-align: start;
-  max-width: 20vh;
+  min-width: 30vh;
+  width: 30vh;
+  max-width: 40vh;
   padding: 1rem;
 }
 footer .container-footer section#container-description h5 {
