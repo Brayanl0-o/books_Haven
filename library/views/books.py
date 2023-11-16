@@ -34,6 +34,7 @@ class BookCreateView(generic.CreateView):
     fields = [
         'name',
         'author',
+        'cover_page' ,
         'genre',
         'release_date',
         'number_pages',
@@ -48,7 +49,7 @@ class BookEditView(UpdateView):
     """
     model = Book
     template_name = 'library/book/book_edit.html'
-    fields = ['name', 'author', 'genre',
+    fields = ['name', 'author','cover_page' , 'genre',
               'release_date', 'number_pages', 'summary']
     success_url = reverse_lazy('books')
 
