@@ -1,9 +1,9 @@
 {% extends 'layout.html' %}
+{%load static%}
+{% block book_edit %}
+<title>{% block title %}Edit {{ book.name  }} - Boook's Haven{% endblock %}</title>
 
-
-{% block book_edit %}{%load static%}
-
-<div class="container">
+<div class="container-book-edit">
     <div class="head_cont">
         <h1>Edit Book</h1>
     </div>
