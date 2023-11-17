@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="{% static 'library/img/shared/logo.ico' %}" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="{% static 'library/css/index.css' %}">
-    <title>{% block title %}Biblioteca Cuyeca{% endblock %}</title>
+    <title>{% block title %}Lista de libros - Boook's Haven{% endblock %}</title>
    
 </head>
 <body>
@@ -37,6 +37,8 @@
         {% endblock %}
         {% block book_create %}
         {% endblock %}
+        {% block book_edit %}
+        {% endblock %}
 
         
         {% block author_list %}
@@ -44,6 +46,8 @@
         {% block author_detail %}
         {% endblock %}
         {% block author_create %}
+        {% endblock %}
+        {% block author_edit %}
         {% endblock %}
         
         {% block footer %}  
