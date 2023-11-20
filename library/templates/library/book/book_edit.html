@@ -3,16 +3,73 @@
 {% block book_edit %}
 <title>{% block title %}Edit {{ book.name  }} - Boook's Haven{% endblock %}</title>
 
-<div class="container-book-edit">
+<div class="container-book-form">
     <div class="head_cont">
         <h1>Edit Book</h1>
     </div>
     <div class="list">
+    
+
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Save</button>
-            <input type="button" value="List Books" onclick="window.location.href=`{% url 'books'  %}`" />
+            
+            <div class="form-group">
+                <label for="{{ form.name.id_for_label }}">Book Name:</label>
+                {{ form.name }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.author.id_for_label }}">Author:</label>
+                {{ form.author }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.cover_page.id_for_label }}">Cover Page:</label>
+                {{ form.cover_page }}
+            </div>
+
+            <div class="form-group">
+                    <label for="{{ form.genre.id_for_label }}">Genre:</label>
+                    {{ form.genre }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.release_date.id_for_label }}">Release Date:</label>
+                {{ form.release_date }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.number_pages.id_for_label }}">Number of Pages:</label>
+                {{ form.number_pages }}
+            </div>
+
+            <div class="form-group" >
+                <label for="{{ form.summary.id_for_label }}">Summary:</label>
+                {{ form.summary }}
+            </div>
+
+            <div class="buttons" >
+    
+                <button  type="submit" >
+                    <span class="material-symbols-outlined">
+                        save
+                    </span>
+                </button>
+
+                <button onclick="window.location.href=`{% url 'book-detail' pk=book.pk %}`">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </button>  
+                {% comment %} <button onclick="window.location.href=`{% url 'books'  %}`" >
+                    <span class="material-symbols-outlined">
+                        view_list
+                    </span>
+                </button> {% endcomment %}
+
+            </div>
+
+
         </form>
     </div>
 </div>
