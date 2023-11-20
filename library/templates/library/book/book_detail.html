@@ -2,28 +2,54 @@
 {%load static%}
 {% block book_detail %}
 <title>{% block title %}{{ book.name  }} - Boook's Haven{% endblock %}</title>
+{% comment %} <link rel="stylesheet" type="text/css"  href="{% static 'library/scss/view_books/style_book_detail.scss' %}"> {% endcomment %}
 
 
-<div class="container-book-detail">
-    <div class="head_cont">
-        <h1>Welcome {{ user.fname }}</h1>
-    </div>
-    <div class="list">
-        <h3>Info about {{ book.name }}</h3>
+<div id="container-book-detail">
+    <img loading="lazy" src="{{ book.cover_page }} " width="50" height="50" alt="Portada del libro"> 
+    <div class="detail">
+        <h3> {{ book.name }}</h3>
+
         <ul>
-            <li>Name of book: {{ book.name}}</li>
-            <li>Author of book: {{ book.author }} </li>
-            <li>Release date: {{ book.release_date }}</li>
-            <li>Summary: {{ book.summary }}</li>
+            <li><span>Autor:</span> {{ book.author }} </li>
+            <li><span>Fecha de lanzamiento:</span> {{ book.release_date }}</li>
+            <li>{{ book.summary }}</li>
+            <li> <span>Link de descarga:</span> 
+                <a href="https://gualeguaychu.gov.ar/apps/dashboard/ftp/biblioteca/62/62.pdf" target="_blank">https://gualeguaychu.gov.ar/apps/dashboard/ftp/biblioteca/62/62.pdf</a>
+            </li>
         </ul>
+
+        
+        <div class="buttons" >
+            <button onclick="window.location.href=`{% url 'index'  %}`">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </button> 
+
+            <button onclick="window.location.href=`{% url 'book-edit' pk=book.pk %}`">
+                <span class="material-symbols-outlined">
+                    edit_note
+                </span>
+            </button>
+            <button onclick="window.location.href=`{% url 'books'  %}`" >
+                <span class="material-symbols-outlined">
+                    view_list
+                </span>
+            </button>
+
+            <button onclick="window.location.href=`{% url 'book-delete' pk=book.pk %}`">
+                <span class="material-symbols-outlined">
+                    delete
+                </span>
+            </button>
+
+        </div>
     </div>
+  
     <br>
-    <div class="botoms">
-        <input type="button" value="Edit" onclick="window.location.href=`{% url 'book-edit' pk=book.pk %}`" />
-        <input type="button" value="Delete" onclick="window.location.href=`{% url 'book-delete' pk=book.pk %}`" />
-        <input type="button" value="List Books" onclick="window.location.href=`{% url 'books'  %}`" />
-        <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
-    </div>
+ 
 </div>
+
 
 {% endblock %}
