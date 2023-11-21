@@ -28,8 +28,17 @@ class Book(models.Model):
         max_length=200,
         default='https://img.freepik.com/vector-premium/adorno-oro-sobre-fondo-cuero-puede-utilizar-como-tarjeta-invitacion-ilustracion-vectorial_443748-1466.jpg'
         )
+    link_dowload_free = models.CharField(
+        max_length=250,
+        default='No hay enlace'
+    )
+    link_dowload_buy = models.CharField(
+        max_length=250,
+        default='No hay enlace'
+    )
     genre = models.CharField(max_length=100)
-    release_date = models.IntegerField(default=0)
+    release_date = models.DateField(default=' ')
+    # release_date = models.IntegerField(default=0)
     number_pages = models.IntegerField(default=0)
     summary = models.TextField(default=0, max_length=800)
 
