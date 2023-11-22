@@ -4,7 +4,7 @@
 <title>{% block title %}{{ book.name  }} - Boook's Haven{% endblock %}</title>
 {% comment %} <link rel="stylesheet" type="text/css"  href="{% static 'library/scss/view_books/style_book_detail.scss' %}"> {% endcomment %}
 
-
+<script src="{% static 'library/js/modal.js' %}"></script>
 <div id="container-book-detail">
     <img loading="lazy" src="{{ book.cover_page }} " width="50" height="50" alt="Portada del libro"> 
     <div class="detail">
@@ -14,14 +14,26 @@
             <li><span>Autor:</span> {{ book.author }} </li>
             <li><span>Fecha de lanzamiento:</span> {{ book.release_date }}</li>
             <li>{{ book.summary }}</li>
-            <li> <span>Link de descarga:</span> 
-                <a href="https://gualeguaychu.gov.ar/apps/dashboard/ftp/biblioteca/62/62.pdf" target="_blank">https://gualeguaychu.gov.ar/apps/dashboard/ftp/biblioteca/62/62.pdf</a>
+            <li> <span>Link de descarga gratis:</span> 
+                {% if book.link_dowload_free != 'No hay enlace' %}
+                    <a href="{{ book.link_dowload_free}}" target="_blank">{{ book.link_dowload_free}}</a>
+                {% else %}
+                    <span>{{ book.link_dowload_free }}</span>
+                {% endif%}
+
+            </li>
+            <li> <span>Link de compra:</span> 
+                {% if book.link_dowload_buy != 'No hay enlace'%}
+                    <a href="{{ book.link_dowload_buy}}" target="_blank">{{ book.link_dowload_buy}}</a>
+                {% else %}
+                    <span>{{book.link_dowload_buy}}</span>
+                {% endif %}
             </li>
         </ul>
 
         
         <div class="buttons" >
-            <button onclick="window.location.href=`{% url 'index'  %}`">
+            <button onclick="window.location.href=`{% url 'books'  %}`">
                 <span class="material-symbols-outlined">
                     arrow_back
                 </span>
@@ -37,8 +49,7 @@
                     view_list
                 </span>
             </button>
-
-            <button onclick="window.location.href=`{% url 'book-delete' pk=book.pk %}`">
+            <button id="openModalBtn" >
                 <span class="material-symbols-outlined">
                     delete
                 </span>
@@ -48,8 +59,21 @@
     </div>
   
     <br>
- 
+
+    
 </div>
-
-
+{% comment %} style="display:none;" {% endcomment %}
+<div id="confirmDeleteModal" class="modal-delete-book" >
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <h2>Confirmar Eliminación</h2>
+        <p>¿Estás seguro de que deseas eliminar este libro?</p>
+    
+        <form method="post" action="{% url 'book-delete' pk=book.pk %}">
+            {% csrf_token %}
+            <button type="submit" id="deleteModalBtn">Eliminar</button>
+            <a href="{% url 'book-detail' pk=book.pk %}">Cancelar</a>
+        </form>
+    </div>
+</div>
 {% endblock %}
