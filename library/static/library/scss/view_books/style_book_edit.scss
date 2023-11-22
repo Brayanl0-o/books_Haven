@@ -5,7 +5,7 @@
     border: 1px solid #868686;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-  
+    min-height: 90vh;
     .head_cont {
       margin-bottom: 20px;
   
@@ -18,21 +18,7 @@
     .list {
     //  background-color: #007bff;
        
-      .buttons{
-        // position: absolute;
-        margin-top: 2rem;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        
-        button{
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-      }
+     
 
       form {
         display: grid;
@@ -41,42 +27,52 @@
         grid-auto-rows: 100px;
         min-width: 50vh;
         min-height: 70vh;
-        
+       
         .form-group {
-         
+          width: 100%;
           margin-bottom: 15px;
   
           label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-
           }
   
           input,
-          select,
-          textarea {
+          select{
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
           }
-  
-          button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
+
+          textarea {
+            width: 200%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
             border-radius: 4px;
-            cursor: pointer;
+            resize: vertical;  
+            height: 200px;    
           }
-  
-          input[type="button"] {
-            background-color: #6c757d;
+        }
+      
+        .buttons{
+          position: absolute;
+          bottom: 0;
+          margin-top: 2rem;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          
+          button{
+              background: none;
+              border: none;
+              cursor: pointer;
           }
-          
-          
         }
       }
     }
