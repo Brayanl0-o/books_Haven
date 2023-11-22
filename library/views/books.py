@@ -1,12 +1,11 @@
 """
 Vistas genericas para administrar los libros
 """
-
+from django.urls import reverse
 from django.views import generic
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, DeleteView
 from ..models.book import Book
-
 class BookListView(generic.ListView):
     """
     Vista genérica para mostrar una lista de libros.
@@ -52,7 +51,9 @@ class BookEditView(UpdateView):
     model = Book
     template_name = 'library/book/book_edit.html'
     fields = ['name', 'author','cover_page' , 'link_dowload_free','link_dowload_buy', 'genre', 'release_date', 'number_pages', 'summary']
-    success_url = reverse_lazy('books')
+    def get_success_url(self):
+        book_pk = self.object.pk
+        return reverse('book-detail', kwargs={'pk': book_pk})
 
 
 class BookDeleteView(DeleteView):
