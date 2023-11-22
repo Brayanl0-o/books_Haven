@@ -1,21 +1,20 @@
 
 {% extends 'layout.html' %}
-{% block book_delete %}{%load static%}
-
-
-
-<div class="container-book-delete">
+{%load static%}
+{% block book_delete %}
+<title>{% block title %}Eliminar {{ book.name }} - Boook's Haven{% endblock %}</title>
+<div id="container-book-delete">
     <div class="head_cont">
-        <h1>Confirm Book Deletion</h1>
+        <h1>Confirmación eliminación libro</h1>
     </div>
     <div class="list">
-        <p>Are you sure you want to delete the book "{{ book.name }} " of "{{ book.author }} "?</p>
+        <p>¿Esta seguro de eliminar el libro "{{ book.name }} " of "{{ book.author }} "?</p>
     </div>
     <div class="botoms">
         <form method="post">
             {% csrf_token %}
-            <button type="submit">Delete</button>
-            <a href="{% url 'books' %}">Cancel</a>
+            <button type="submit">Eliminar</button>
+            <a href="{% url 'books' %}">Cancelar</a>
         </form>
     </div>
 </div>
