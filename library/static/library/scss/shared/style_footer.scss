@@ -1,9 +1,10 @@
 footer{
     background-color: rgb(207, 123, 13);
     min-width: auto;
+    height: auto;
     margin-top: 2%;
     margin-bottom: 0%;
-    height: auto;
+   
     width: 100%;
 
     .container-footer{
@@ -16,7 +17,7 @@ footer{
         padding: 0.5rem;
         background-color: rgb(26, 23, 23);
         color: wheat;
-
+        width: 100%;
         section#container-description{
             background-color: rgba(0, 0, 0, 0);
             text-align: start;
@@ -26,7 +27,7 @@ footer{
 
             h5{
                 text-align: start;
-                font-size: larger;
+                font-size: 10px;
                 padding-bottom: 10px;
             }
             p{
@@ -42,6 +43,14 @@ footer{
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            img{
+                margin-bottom: 5px;
+            }
+            h1, h4{
+                font-size: 1rem;
+                padding: 2px;
+            }
             
         }
     
@@ -70,14 +79,53 @@ footer{
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding:0.5rem 2rem 0.5rem 2rem;
+        padding:0.5rem 0.1rem 0.5rem 1rem;
 
         .social-networks{
-            background-color: aquamarine;
+           
+            width:40%;
+           
+            img{
+                width: 4%;
+                height: auto;
+                margin-left: 10px;
+            }
         }
         span{
             font-weight: 600;
+            font-size: small;
+            width: auto;
+    
         }
     }
 
+}
+
+
+@media screen and (max-width:1008px){
+    .social-networks{
+        img{
+            min-width: 2rem;
+       
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .container-footer{
+        width: auto;
+        background-color: aqua;
+        font-size:smaller;
+    }
+    .social-networks{
+        img{
+            min-width: 1rem;
+       
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    #container-description{
+        display: none;
+    }
 }
