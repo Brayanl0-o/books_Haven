@@ -5,8 +5,26 @@
 
 }
 #new_authors {
-    width: 25%; 
+    width: 30%; 
+
 }
 
+@media screen and (max-width:1000px) {
+    
+    #new_books {
+        width: auto;
+    }
+    #new_authors {
+        width: 80%; 
+        margin: auto;
+    }
 
+}
+@media screen and (max-width:350px) {
+  
+    #new_authors {
+        width: 100%; 
+        margin: auto;
+    }
 
+}
