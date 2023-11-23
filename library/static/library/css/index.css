@@ -307,7 +307,7 @@ section#container-books h4 {
 .menu-btn {
   position: fixed;
   z-index: 101;
-  right: 10px;
+  right: 15px;
   top: 10px;
   height: 50px;
   width: 50px;
@@ -436,7 +436,7 @@ input[type=checkbox] {
   text-decoration: none;
 }
 .head a h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Noto Serif", serif;
   color: rgb(0, 0, 0);
 }
@@ -449,14 +449,34 @@ input[type=checkbox] {
   padding: 10px;
 }
 
+@media screen and (max-width: 400px) {
+  .head {
+    width: 80%;
+  }
+}
 #new_books {
   width: 70%;
 }
 
 #new_authors {
-  width: 25%;
+  width: 30%;
 }
 
+@media screen and (max-width: 1000px) {
+  #new_books {
+    width: auto;
+  }
+  #new_authors {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 350px) {
+  #new_authors {
+    width: 100%;
+    margin: auto;
+  }
+}
 .container {
   z-index: -50;
   width: 100%;
@@ -635,8 +655,7 @@ input[type=checkbox] {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  min-width: 80%;
-  width: 100vh;
+  width: auto;
   height: auto;
   text-align: center;
 }
@@ -648,7 +667,23 @@ input[type=checkbox] {
   border-left: 1px solid rgb(255, 255, 255);
   border-right: 1px solid rgb(255, 255, 255);
 }
+.categories-container .box img {
+  margin: 15px;
+}
 
+@media screen and (max-width: 768px) {
+  .categories-container {
+    width: 80%;
+  }
+  .categories-container img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 408px) {
+  .categories-container {
+    display: none;
+  }
+}
 section#container-new-books {
   display: flex;
   flex-flow: column wrap;
@@ -681,10 +716,10 @@ section#container-new-books h4 {
   flex-basis: 200px;
   flex-grow: 0;
   height: 300px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.5019607843);
   box-shadow: 10px 10px rgb(50, 51, 51);
-  border: 2px solid #fff;
-  border-radius: 10px 4px 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4862745098);
+  border-radius: 4px 4px 4px 4px;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   overflow: hidden;
@@ -772,15 +807,27 @@ section#container-new-books h4 {
   transition: all 0.5s ease-in-out;
 }
 
+@media screen and (max-width: 350px) {
+  section#container-new-books {
+    width: 100%;
+    margin: auto;
+  }
+  section#container-new-books h4 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .card {
+    flex-basis: 250px;
+    height: 350px;
+    margin-bottom: 10%;
+  }
+}
 section#container-new-authors {
-  display: flex;
-  flex-flow: column wrap;
   background-color: #fff;
   margin-top: 4rem;
-  width: auto;
   height: auto;
-  max-width: 100%;
   text-decoration: none;
+  min-width: 100%;
 }
 section#container-new-authors h4 {
   border: 1px solid #000000;
@@ -796,12 +843,10 @@ section#container-new-authors .card-authors {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  width: auto;
-  min-width: 100%;
   padding: 1rem;
   margin: auto;
   overflow-y: auto;
-  max-height: 65vh;
+  max-height: 100vh;
   border: 0.2rem solid transparent;
   border-top: none;
   border-image: linear-gradient(5deg, #000000, #000000, #a5a5a5) 1;
@@ -845,20 +890,41 @@ section#container-new-authors .card-authors .authors .button span {
   color: red;
 }
 
+@media screen and (max-width: 350px) {
+  section#container-new-authors {
+    width: 100%;
+    margin: auto;
+  }
+  section#container-new-authors h4 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .card {
+    flex-basis: 250px;
+    height: 350px;
+    margin-bottom: 10%;
+  }
+}
 #content-container {
   margin-top: 2rem;
-  padding: 0 10rem 0 10rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  width: 85%;
+  gap: 10px;
 }
 
+@media screen and (max-width: 1000px) {
+  #content-container {
+    flex-flow: column wrap;
+  }
+}
 footer {
   background-color: rgb(207, 123, 13);
   min-width: auto;
+  height: auto;
   margin-top: 2%;
   margin-bottom: 0%;
-  height: auto;
   width: 100%;
 }
 footer .container-footer {
@@ -870,6 +936,7 @@ footer .container-footer {
   padding: 0.5rem;
   background-color: rgb(26, 23, 23);
   color: wheat;
+  width: 100%;
 }
 footer .container-footer section#container-description {
   background-color: rgba(0, 0, 0, 0);
@@ -880,7 +947,7 @@ footer .container-footer section#container-description {
 }
 footer .container-footer section#container-description h5 {
   text-align: start;
-  font-size: larger;
+  font-size: 10px;
   padding-bottom: 10px;
 }
 footer .container-footer section#container-description p {
@@ -893,6 +960,14 @@ footer .container-footer .logo-container {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+footer .container-footer .logo-container img {
+  margin-bottom: 5px;
+}
+footer .container-footer .logo-container h1, footer .container-footer .logo-container h4 {
+  font-size: 1rem;
+  padding: 2px;
 }
 footer .container-footer .list-container {
   text-align: start;
@@ -916,15 +991,42 @@ footer .end {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  padding: 0.5rem 0.1rem 0.5rem 1rem;
 }
 footer .end .social-networks {
-  background-color: aquamarine;
+  width: 40%;
+}
+footer .end .social-networks img {
+  width: 4%;
+  height: auto;
+  margin-left: 10px;
 }
 footer .end span {
   font-weight: 600;
+  font-size: small;
+  width: auto;
 }
 
+@media screen and (max-width: 1008px) {
+  .social-networks img {
+    min-width: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container-footer {
+    width: auto;
+    background-color: aqua;
+    font-size: smaller;
+  }
+  .social-networks img {
+    min-width: 1rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  #container-description {
+    display: none;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -933,7 +1035,6 @@ body {
   height: 100vh;
   font-family: "Noto Serif", serif;
   background-color: #bdbdbd;
-  min-width: 100vh;
 }
 
 /*# sourceMappingURL=index.css.map */
