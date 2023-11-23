@@ -1,16 +1,10 @@
 section#container-new-authors{
 
-    display: flex;
-    flex-flow: column wrap;
     background-color: $secondary-color;
     margin-top: 4rem;
-    width: auto;
     height: auto;
-    max-width: 100%;
     text-decoration: none;
-
-    // max-height: 40%;
-
+    min-width: 100%;
 
     h4{
         border: 1px solid $primary-color ;
@@ -27,12 +21,10 @@ section#container-new-authors{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        width: auto;
-        min-width: 100%;
         padding: 1rem;
         margin: auto;
         overflow-y: auto;
-        max-height: 65vh;
+        max-height: 100vh;
         border: 0.2rem solid transparent;
         border-top:none ;
         border-image: linear-gradient(5deg, #000000, #000000, #a5a5a5) 1;
@@ -91,4 +83,23 @@ section#container-new-authors{
         
     }
 }
+@media screen and (max-width:350px) {
+    section#container-new-authors{
+     
+        width: 100%;
+        margin: auto;
+    
+        h4{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+   
+    .card{
 
+        flex-basis: 250px;
+        height: 350px;
+        margin-bottom: 10%;
+
+    }
+}
