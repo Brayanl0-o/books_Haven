@@ -38,10 +38,10 @@ section#container-new-books{
     flex-basis: 200px;
     flex-grow: 0;
     height: 300px;
-    background: #fff;
+    background: #00000080;
     box-shadow: 10px 10px rgb(50, 51, 51);
-    border: 2px solid #fff;
-    border-radius: 10px 4px 4px 10px;
+    border: 1px solid #ffffff7c;
+    border-radius: 4px 4px 4px 4px;
     cursor: pointer;
     transition: all .5s cubic-bezier(.8,.5,.2,1.4);
     overflow: hidden;
@@ -128,3 +128,23 @@ section#container-new-books{
     transition: all .5s ease-in-out;
 }
 
+@media screen and (max-width:350px) {
+    section#container-new-books{
+     
+        width: 100%;
+        margin: auto;
+    
+        h4{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+   
+    .card{
+
+        flex-basis: 250px;
+        height: 350px;
+        margin-bottom: 10%;
+
+    }
+}
