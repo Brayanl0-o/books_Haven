@@ -4,7 +4,7 @@
 
 
 
-<div class="container-author-list">
+<div id="container-author-list">
     <div class="head_cont">
         <h2>List Authors</h2>
     </div>
@@ -12,28 +12,48 @@
         <ul>
             {% for author in author_list %}
             <li>
-                <a href="{% url 'author-detail' author.id %}">• {{ author.name }}</a>
-
-                {% if author.books.exists %}
-
-                <ul>
-                    <p>Author of: </p>
-                    {% for book in author.books.all %}
-                    <li>{{ book.name }}</li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                <p>No hay libros asociados.</p>
-                {% endif %}
+                <a href="{% url 'author-detail' author.id %}">
+                    <img loading="lazy" src="{{ author.photo_author }} " width="50" height="50" alt=""> 
+                    <p>{{ author.photo_author }}</p>  
+                    {{ author.name }}
+                </a>
             </li>
             {% empty %}
             <li>No hay autores disponibles.</li>
             {% endfor %}
         </ul>
     </div>
-    <div class="botoms">
+    <div class="buttons" >
+        <button onclick="window.location.href=`{% url 'index'  %}`">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button> 
+    
+    
+        <button onclick="window.location.href=`{% url 'create-author'  %}`" >
+            <span class="material-symbols-outlined">
+                add_circle
+                </span>
+        </button>
+
+    </div>
+    {% comment %} <div class="botoms">
         <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
         <input type="button" value="Create new author" onclick="window.location.href=`{% url 'create-author'  %}`" />
-    </div>
+    </div> {% endcomment %}
 </div>
+ {% comment %} {% if author.books.exists %}
+       
+                <ul>
+                    <p>Author of: </p>
+                    {% for book in author.books.all %}
+                    <li>{{ book.name }}</li>
+                    {% endfor %}
+                </ul> 
+       
+                {% else %}
+                <p>No hay libros asociados.</p>
+                {% endif %} {% endcomment %}
+
 {% endblock %}
