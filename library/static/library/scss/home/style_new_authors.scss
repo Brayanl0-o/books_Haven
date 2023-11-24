@@ -4,7 +4,7 @@ section#container-new-authors{
     margin-top: 4rem;
     height: auto;
     text-decoration: none;
-    min-width: 100%;
+    margin: auto;
 
     h4{
         border: 1px solid $primary-color ;
@@ -18,30 +18,30 @@ section#container-new-authors{
     }
 
     .card-authors{
-        display: flex;
-        flex-flow: column nowrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
         justify-content: center;
         padding: 1rem;
         margin: auto;
         overflow-y: auto;
-        max-height: 100vh;
+        max-height: 70vh;
         border: 0.2rem solid transparent;
-        border-top:none ;
+        border-top: none;
         border-image: linear-gradient(5deg, #000000, #000000, #a5a5a5) 1;
+     
        
         a{
             text-decoration: none;
-
         }
-    
+
         .authors{
             display: flex;
             flex-flow: row nowrap;
-            justify-content: center;
+            justify-content: space-between;
+            gap:0rem;
             align-items: center;
-     
-            
             img{
+             
                 border-radius: 50%;
                 
             }
@@ -51,13 +51,18 @@ section#container-new-authors{
                 flex-flow: column wrap;
                 justify-content: center;
                 align-items: center;                
-                margin:1rem;
+                margin:0.5rem;
+                min-width: 50%;
                 color: black;
-                // max-width: 100%;
-             
+                border-left: 1px solid brown;
+                border-right: 1px solid brown;
+                h1{
+                    font-size: medium;
+                }
                 p{
-
-                    padding-top: 5px;
+                   font-size: small;
+                   text-align: center;
+                   line-height: 0.8rem;
                 }
             
             } 
@@ -73,10 +78,7 @@ section#container-new-authors{
                 border: none;
                 background-color: #0000;
 
-                span{
-                    display: none;
-                    color: red;
-                }
+        
             }
          
         }
