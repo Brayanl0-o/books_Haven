@@ -280,6 +280,30 @@ section#container-books h4 {
   cursor: pointer;
 }
 
+#container-author-list {
+  min-height: 70vh;
+  background-color: red;
+  width: 80%;
+  margin: auto;
+}
+#container-author-list .head_cont {
+  margin-bottom: 10px;
+}
+#container-author-list .list {
+  background-color: aqua;
+}
+#container-author-list .list ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#container-author-list .list ul, #container-author-list .list li, #container-author-list .list a {
+  list-style: none;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
