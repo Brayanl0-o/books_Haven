@@ -21,6 +21,10 @@ class Author(models.Model):
     name = models.CharField(max_length=100)
     birth_date = models.DateField()
     death_date = models.DateField()
+    photo_author = models.CharField(
+        max_length=250,
+        default='https://img.uefa.com/imgml/TP/players/39/2023/324x324/250058368.jpg'
+        )
     books = models.ManyToManyField('Book', related_name='authors', blank=True)
 
     def __str__(self):
