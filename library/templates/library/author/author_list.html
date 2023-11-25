@@ -14,8 +14,13 @@
             <li>
                 <a href="{% url 'author-detail' author.id %}">
                     <img loading="lazy" src="{{ author.photo_author }} " width="50" height="50" alt=""> 
-                    <p>{{ author.photo_author }}</p>  
-                    {{ author.name }}
+                    {% comment %} <p>{{ author.photo_author }}</p>   {% endcomment %}
+                   <div class="info-author">
+                        <h2> {{ author.name }}</h2>
+                        <p> {{ author.birth_date }}</p>
+                        <p> {{ author.death_date }}</p>
+                   </div>
+
                 </a>
             </li>
             {% empty %}
