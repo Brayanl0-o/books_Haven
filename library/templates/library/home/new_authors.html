@@ -8,12 +8,14 @@
         {% for author in authors %}
         <a href="{% url 'author-detail' pk=author.pk %}">
             <div class="authors">
+                <div class="photo_author">
                     <img loading="lazy" src="{{author.photo_author}}" width="50" height="50" alt="Portada del libro"> 
+                </div>
                     <div class="description">
                     
                         <h1>{{ author.name }}</h1>
                         <p>
-                            {{author.birth_date}} <br>-<br>{{author.death_date}}
+                            {{author.birth_date}} - {{author.death_date}}
                         </p>
                     </div>
                     <button class="button">
