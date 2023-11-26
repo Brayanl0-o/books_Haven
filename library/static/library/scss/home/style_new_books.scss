@@ -11,10 +11,7 @@ section#container-new-books{
         color: $text-color-secondary;
         padding: 1rem;
 
-        max-height: 100px; /* Altura máxima de la descripción */
-        overflow: hidden;
-        text-overflow: ellipsis; /* Agrega puntos suspensivos (...) si se corta el texto */
-        white-space: nowrap; /* Evita saltos de línea */
+      
     }
 }
 
@@ -65,9 +62,12 @@ section#container-new-books{
     padding: 20px;
     box-sizing: border-box;
     clip-path: circle(0% at 100% 100%);
-
     h1{
         font-size: 1rem;
+        max-height: 200px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap; 
     }
     p{
 
@@ -84,6 +84,8 @@ section#container-new-books{
         height: 75%;
         // max-height: 100%; 
         margin: 5px;
+        margin-bottom: 1rem;
+
         color: #000000;
         text-overflow: ellipsis; /* Agrega puntos suspensivos (...) si se corta el texto */
     }
