@@ -6,6 +6,25 @@
 <section id="container-books">
 
     <h4>Lista de Libros &#129179;</h4>
+
+    <div class="buttons" >
+        <button onclick="window.location.href=`{% url 'index'  %}`">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button> 
+    
+    
+        <button onclick="window.location.href=`{% url 'create-book' %}`" >
+            <span class="material-symbols-outlined">
+                add_circle
+                </span>
+        </button>
+      
+    
+    </div>
+    
+
     {% if book_list%}
 
     <div class="wrapper-card">
@@ -42,22 +61,7 @@
     {% endif %}
 
 </section>
-<div class="buttons" >
-    <button onclick="window.location.href=`{% url 'index'  %}`">
-        <span class="material-symbols-outlined">
-            arrow_back
-        </span>
-    </button> 
 
-
-    <button onclick="window.location.href=`{% url 'create-book' %}`" >
-        <span class="material-symbols-outlined">
-            add_circle
-            </span>
-    </button>
-  
-
-</div>
 {% comment %} <div class="botoms">
     <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
     <input type="button" value="Create new book" onclick="window.location.href=`{% url 'create-book' %}`" />
