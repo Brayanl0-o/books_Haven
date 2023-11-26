@@ -2,20 +2,58 @@
 
 {% block author_edit %}{%load static%}
 
+<title>{% block title %}Edit {{ author.name  }} - Boook's Haven{% endblock %}</title>
 
 
-<div class="container-author-edit">
+<div class="container-author-form">
     <div class="head_cont">
         <h1>Edit author</h1>
     </div>
-    <div class="botoms">
+    <div class="list">
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="form-group">
+                <label for="{{ form.name.id_for_label }}">Nombre del author:</label>
+                {{ form.name }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.birth_date.id_for_label }}">Fecha de nacimiento:</label>
+                {{ form.birth_date }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.death_date.id_for_label }}">Fecha de muerte:</label>
+                {{ form.death_date }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.photo_author.id_for_label }}">Foto del autor:</label>
+                {{ form.photo_author }}
+            </div>
+            <div class="form-group" >
+                <label for="{{ form.books.id_for_label }}">Libros: </label>
+                {{ form.books }}
+            </div>
 
-            <button type="submit">Save</button>
+            <div class="buttons-author" >
+                <button onclick="window.location.href=`{% url 'author-detail' pk=author.pk %}`">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </button>  
+
+
+                {% comment %} <button onclick="window.location.href=`{% url 'books'  %}`" >
+                    <span class="material-symbols-outlined">
+                        view_list
+                    </span>
+                </button> {% endcomment %}
+
+            </div>
+
+            {% comment %} <button type="submit">Save</button>
             <input type="button" value="List Authors" onclick="window.location.href=`{% url 'authors' %}`" />
             <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
+         {% endcomment %}
+        
         </form>
     </div>
 </div>
