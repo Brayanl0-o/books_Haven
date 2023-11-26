@@ -1,16 +1,21 @@
-{%extends 'layout.html'%}
-{%load static%}
+{% extends 'layout.html' %}
+{% load static %}
 {% block author_detail %}
 
-<div class="container-author-detail">
-    <div class="head_cont">
-        <h2>Profile Author</h2>
-    </div>
-    <div class="list">
-        <p> <strong style="font-size: 20px;">Name Author:</strong> {{ author.name }}</p>
-        <p> <strong style="font-size: 20px;">Author birth date: </strong>{{ author.birth_date }}</p>
-        <p> <strong style="font-size: 20px;">Author death date: </strong> {{ author.death_date }}</p>
+<script src="{% static 'library/js/modal.js' %}"></script>
+<title>{% block title %}{{ author.name  }} - Boook's Haven{% endblock %}</title>
 
+<div id="container-author-detail">
+
+    <img loading="lazy" src="{{ author.photo_author }} " width="50" height="50" alt="Foto del author"> 
+    <div class="detail">
+        <h2> {{ author.name }}</h2>
+
+        <ul>
+            <li><span>Fecha de lanzamiento:</span> {{ author.birth_date }}</li>
+            <li><span>Fecha de lanzamiento:</span> {{ author.death_date }}</li>
+            <li>{{ author.summary }} {% lorem 50 w%}</li>
+        </ul>
 
         <h3>Books of author:</h3>
         <ul>
@@ -20,13 +25,56 @@
             <li>No hay libros disponibles.</li>
             {% endfor %}
         </ul>
+        
+        <div class="buttons" >
+            <button onclick="window.location.href=`{% url 'index'  %}`">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </button> 
+    
+            <button onclick="window.location.href=`{% url 'author-edit' pk=author.pk %}`">
+                <span class="material-symbols-outlined">
+                    edit_note
+                </span>
+            </button>
+            <button onclick="window.location.href=`{% url 'authors' %}`"  >
+                <span class="material-symbols-outlined">
+                    view_list
+                </span>
+            </button>
+            <button id="openModalBtn" >
+                <span class="material-symbols-outlined">
+                    delete
+                </span>
+            </button>
+    
+        </div>
     </div>
+
+    
     <br>
-    <div class="botoms">
+    {% comment %} <div class="botoms">
         <input type="button" value="Edit" onclick="window.location.href=`{% url 'author-edit' pk=author.pk %}`" />
         <input type="button" value="Delete" onclick="window.location.href=`{% url 'author-delete' pk=author.pk %}`" />
         <input type="button" value="List Authors" onclick="window.location.href=`{% url 'authors' %}`" />
         <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
-    </div>
+    </div> {% endcomment %}
+
+    
 </div>
+
+ <div id="confirmDeleteModal" class="modal-delete-author" >
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <h2>Confirmar Eliminación</h2>
+        <p>¿Estás seguro de que deseas eliminar este autor?</p>
+    
+        <form method="post" action="{% url 'author-delete' pk=author.pk %}">
+            {% csrf_token %}
+            <button type="submit" id="deleteModalBtn">Eliminar</button>
+            <a href="{% url 'author-detail' pk=author.pk %}">Cancelar</a>
+        </form>
+    </div>
+</div> 
 {% endblock %}
