@@ -1,0 +1,113 @@
+
+#container-author-detail{
+    // background-color: rgb(237, 238, 238);
+    width: 70%;
+    min-height: 10vh;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    img{
+        flex: 1;
+        flex-basis: 300px;
+        flex-grow: 0;
+        height: 400px;
+        margin: 2rem;
+        box-shadow: -5px -5px rgb(50, 51, 51);
+        cursor: pointer;
+        margin-top: 3%;
+        border-radius: 50%;
+
+    }
+
+    .detail{
+        width: 60%;
+        min-height: 50vh;
+        padding:10px;
+        box-shadow:  -10px -10px 20px 0px rgb(50, 51, 51);
+
+        span{
+        color: black;
+        }
+
+        h2{
+            margin: 1rem 0 1rem 0;
+        }
+        h3{
+            margin: 2rem 0 0rem 0;
+        }
+        
+        ul{
+            letter-spacing: 0.1px;
+            list-style: none;
+            text-align: left;
+
+            li:nth-last-child(1),li:nth-last-child(2){
+                margin-top: 1.5rem;
+            }
+
+            span{
+                font-weight: 700;
+            }
+        }
+
+       
+    }
+
+}
+
+.modal-delete-author {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+
+    .modal-content {
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #ccc;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background: #ddd;
+            }
+        }
+
+        a {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background: #c0392b;
+            }
+        }
+    }
+}
