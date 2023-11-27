@@ -1,12 +1,14 @@
 // Estilos generales
 .container-author-form {
-    margin: 20px;
+    margin: auto;
     padding: 20px;
     border: 1px solid #868686;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     min-height: auto;
+    min-width: auto;
     max-width: 80%;
+
 
     .head_cont {
       margin-bottom: 20px;
@@ -20,26 +22,23 @@
     .list {
     //  background-color: #007bff;
        position: relative;
-     
-
+        padding-bottom: 25%;
       form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
-        grid-auto-rows: 100px;
+        grid-auto-rows: 75px;
         min-width: auto;
-        min-height: 60vh;
-       
+        min-height: auto;
+      
         .form-group {
           width: 100%;
-          margin-bottom: 15px;
-  
           label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
           }
-  
+
           input
          {
             width: 100%;
@@ -50,22 +49,37 @@
           }
 
           select {
-            width: 200%;
+            width: 100%;
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
             resize: vertical;  
-            max-height:200px;   
-            min-height:200px;   
+            max-height:100px;   
+            min-height:100px;  
              
+          }
+          textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;  
+            max-height:120px;   
+            min-height:120px;  
+            
+          }
+          
+          &.full-row {
+            grid-column: span 2; 
           }
         }
       
         .buttons-author{
           position: absolute;
+          // background-color: rebeccapurple;
           bottom: 0;
-          margin-top: 2rem;
           display: flex;
           flex-flow: row nowrap;
           justify-content: center;
@@ -80,29 +94,28 @@
         }
        
       }
-      .buttons{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        margin-top: 0rem;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
+      // .buttons{
+      //   position: absolute;
+      //   right: 0;
+      //   bottom: 0;
+      //   margin-top: 0rem;
+      //   display: flex;
+      //   flex-flow: row nowrap;
+      //   justify-content: center;
+      //   align-items: center;
+      //   gap: 2rem;
         
-        button{
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-      }
+      //   button{
+      //       background: none;
+      //       border: none;
+      //       cursor: pointer;
+      //   }
+      // }
     }
   }
   @media screen and (max-width:758px) {
     .container-author-form {
       form{
-   
         min-width: 90vh;
       }
      
