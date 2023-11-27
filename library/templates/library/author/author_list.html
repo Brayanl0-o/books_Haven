@@ -5,9 +5,24 @@
 
 
 <div id="container-author-list">
-    <div class="head_cont">
-        <h2>List Authors</h2>
-    </div>
+
+        <h4>List Authors</h4>
+ 
+        <div class="buttons" >
+            <button onclick="window.location.href=`{% url 'index'  %}`">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </button> 
+        
+        
+            <button onclick="window.location.href=`{% url 'create-author'  %}`" >
+                <span class="material-symbols-outlined">
+                    add_circle
+                    </span>
+            </button>
+        
+        </div>
     <div class="list">
         <ul>
             {% for author in author_list %}
@@ -28,21 +43,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="buttons" >
-        <button onclick="window.location.href=`{% url 'index'  %}`">
-            <span class="material-symbols-outlined">
-                arrow_back
-            </span>
-        </button> 
-    
-    
-        <button onclick="window.location.href=`{% url 'create-author'  %}`" >
-            <span class="material-symbols-outlined">
-                add_circle
-                </span>
-        </button>
-
-    </div>
+   
     {% comment %} <div class="botoms">
         <input type="button" value="Go back home" onclick="window.location.href=`{% url 'index'  %}`" />
         <input type="button" value="Create new author" onclick="window.location.href=`{% url 'create-author'  %}`" />
