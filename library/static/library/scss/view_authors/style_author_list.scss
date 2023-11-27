@@ -4,8 +4,9 @@
     width: 90%;
     margin:auto;
 
-    .head_cont{
-        margin: 10px;
+    h4{
+        font-size: 2rem;
+        text-align: center;
     }
 
     .list {
@@ -62,18 +63,29 @@
                             padding: 10px;
                             margin: auto;
                             font-size: small;
+                            // background-color: antiquewhite;
+                            width: 80%;
+                            // display: inline-block;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
                         }
                   
                         p{
                             font-size: small;
                             text-align: center; 
-                      
-
-
+                    
                         }
                     }
                 }
+                a:hover{
+                    border: 2px solid rgba(255, 255, 255, 0.651);
+                    background-color: rgba(163, 163, 163, 0.692);
+    
+    
+                }
             }
+         
         }
     }
 }
