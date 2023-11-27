@@ -6,6 +6,8 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     min-height: auto;
+    max-width: 80%;
+
     .head_cont {
       margin-bottom: 20px;
   
@@ -25,7 +27,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         grid-auto-rows: 100px;
-        min-width: 50vh;
+        min-width: auto;
         min-height: 60vh;
        
         .form-group {
@@ -55,7 +57,8 @@
             border-radius: 4px;
             resize: vertical;  
             max-height:200px;   
-            min-height:200px;    
+            min-height:200px;   
+             
           }
         }
       
@@ -96,5 +99,23 @@
       }
     }
   }
-  
+  @media screen and (max-width:758px) {
+    .container-author-form {
+      form{
+   
+        min-width: 90vh;
+      }
+     
+    
+     
+      }
+    }
+@media screen and (max-width:358px) {
+    .container-author-form {
+        margin: auto;
+        max-width: 90%;
+    
+     
+      }
+    }
   
