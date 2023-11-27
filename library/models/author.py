@@ -19,8 +19,9 @@ class Author(models.Model):
     """
 
     name = models.CharField(max_length=100)
-    birth_date = models.DateField()
-    death_date = models.DateField()
+    birth_date = models.DateField(default=' ')
+    death_date = models.DateField(default=' ')
+    biography = models.TextField(default=' ', max_length=800)
     photo_author = models.CharField(
         max_length=250,
         default='https://img.uefa.com/imgml/TP/players/39/2023/324x324/250058368.jpg'
