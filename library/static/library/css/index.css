@@ -584,12 +584,13 @@ section#container-books h4 {
   }
 }
 .container-author-form {
-  margin: 20px;
+  margin: auto;
   padding: 20px;
   border: 1px solid #868686;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   min-height: auto;
+  min-width: auto;
   max-width: 80%;
 }
 .container-author-form .head_cont {
@@ -601,18 +602,18 @@ section#container-books h4 {
 }
 .container-author-form .list {
   position: relative;
+  padding-bottom: 25%;
 }
 .container-author-form .list form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: 100px;
+  grid-auto-rows: 75px;
   min-width: auto;
-  min-height: 60vh;
+  min-height: auto;
 }
 .container-author-form .list form .form-group {
   width: 100%;
-  margin-bottom: 15px;
 }
 .container-author-form .list form .form-group label {
   display: block;
@@ -627,19 +628,31 @@ section#container-books h4 {
   border-radius: 4px;
 }
 .container-author-form .list form .form-group select {
-  width: 200%;
+  width: 100%;
   padding: 8px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
-  max-height: 200px;
-  min-height: 200px;
+  max-height: 100px;
+  min-height: 100px;
+}
+.container-author-form .list form .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  max-height: 120px;
+  min-height: 120px;
+}
+.container-author-form .list form .form-group.full-row {
+  grid-column: span 2;
 }
 .container-author-form .list form .buttons-author {
   position: absolute;
   bottom: 0;
-  margin-top: 2rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -647,22 +660,6 @@ section#container-books h4 {
   gap: 2rem;
 }
 .container-author-form .list form .buttons-author button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.container-author-form .list .buttons {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-top: 0rem;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.container-author-form .list .buttons button {
   background: none;
   border: none;
   cursor: pointer;
