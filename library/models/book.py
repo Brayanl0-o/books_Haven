@@ -39,8 +39,8 @@ class Book(models.Model):
     genre = models.CharField(max_length=100)
     release_date = models.DateField(default=' ')
     # release_date = models.IntegerField(default=0)
-    number_pages = models.IntegerField(default=0)
-    summary = models.TextField(default=0, max_length=800)
+    number_pages = models.IntegerField(default=0, max_length=4)
+    summary = models.TextField(default='', max_length=800)
 
     def __str__(self):
         return str(self.name)
