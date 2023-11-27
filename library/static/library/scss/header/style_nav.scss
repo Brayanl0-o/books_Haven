@@ -147,3 +147,9 @@ input[type="checkbox"] {
     filter: hue-rotate(360deg);
   }
 }
+
+@media screen and (max-width:800px) {
+  .wrapper ul li a {
+    font-size: 20px;
+  }
+}
