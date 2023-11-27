@@ -6,6 +6,7 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     min-height: 90vh;
+    max-width: 90%;
     .head_cont {
       margin-bottom: 20px;
   
@@ -25,7 +26,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         grid-auto-rows: 100px;
-        min-width: 50vh;
+        min-width: auto;
         min-height: 70vh;
        
         .form-group {
@@ -41,6 +42,7 @@
           input,
           select{
             width: 100%;
+            
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ccc;
@@ -49,32 +51,36 @@
 
           textarea {
             width: 200%;
+            
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
             resize: vertical;  
-            height: 200px;    
+            max-height:150px;   
+            min-height:150px;  
+
           }
         }
       
         .buttons{
           position: absolute;
-          bottom: 0;
-          margin-top: 2rem;
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: center;
-          align-items: center;
-          gap: 2rem;
-          
-          button{
-              background: none;
-              border: none;
-              cursor: pointer;
-          }
+          bottom: 0px;
+      
         }
+        
       }
     }
   }
+
+  @media screen and (max-width:358px) {
+    .container-book-form {
+      margin: auto;
+      max-width: 90%;
+    
+     
+      }
+    }
+    
+  
   
