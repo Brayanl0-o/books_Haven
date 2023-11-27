@@ -17,7 +17,7 @@
   
     .list {
     //  background-color: #007bff;
-       
+       position: relative;
      
 
       form {
@@ -54,13 +54,14 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             resize: vertical;  
-            height: 200px;    
+            max-height:200px;   
+            min-height:200px;    
           }
         }
       
         .buttons-author{
           position: absolute;
-          bottom: 20%;
+          bottom: 0;
           margin-top: 2rem;
           display: flex;
           flex-flow: row nowrap;
@@ -73,6 +74,24 @@
               border: none;
               cursor: pointer;
           }
+        }
+       
+      }
+      .buttons{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-top: 0rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        
+        button{
+            background: none;
+            border: none;
+            cursor: pointer;
         }
       }
     }
