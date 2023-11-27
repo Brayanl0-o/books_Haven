@@ -35,6 +35,7 @@ class AuthorCreateView(generic.CreateView):
         'name',
         'birth_date',
         'death_date',
+        'biography',
         'photo_author',
         'books'
     ]
@@ -47,7 +48,7 @@ class AuthorEditView(UpdateView):
     """
     model = Author
     template_name = 'library/author/author_edit.html'
-    fields = ['name', 'birth_date', 'death_date', 'photo_author',
+    fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author',
               'books']
     success_url = reverse_lazy('authors')
 
