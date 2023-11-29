@@ -17,14 +17,17 @@
                 <label for="{{ form.name.id_for_label }}">Nombre del author:</label>
                 {{ form.name }}
             </div>
+
             <div class="form-group">
                 <label for="{{ form.birth_date.id_for_label }}">Fecha de nacimiento:</label>
-                {{ form.birth_date }}
+                <input type="date" name="birth_date" value="{{ author.birth_date|date:'Y-m-d' }}" />
             </div>
+
             <div class="form-group">
                 <label for="{{ form.death_date.id_for_label }}">Fecha de muerte:</label>
-                {{ form.death_date }}
+                <input type="date" name="death_date" value="{{ author.death_date|date:'Y-m-d' }}" />
             </div>
+
             <div class="form-group">
                 <label for="{{ form.photo_author.id_for_label }}">Foto del autor:</label>
                 {{ form.photo_author }}
@@ -34,24 +37,20 @@
                 <label for="{{ form.biography.id_for_label }}">Biografia:</label>
                 {{ form.biography }}
             </div>
+
             <br>
             <br>
             <div class="form-group full-row" >
                 <label for="{{ form.books.id_for_label }}">Libros: </label>
                 {{ form.books }}
             </div>
+
             <div class="buttons-author" >
-  
                <button  value="Submit">
                     <span class="material-symbols-outlined">
                         save
                     </span>
                 </button>  
-    
-    
-            
-       
-            
             </div>
            
 
