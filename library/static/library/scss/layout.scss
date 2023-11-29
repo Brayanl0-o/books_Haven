@@ -1,5 +1,28 @@
+
+body{
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    min-height: auto;
+    height: 100vh;
+    font-family: $body-fonts;
+    background-color: $secondary-background-color;
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+  }
+
 #content-container {
-    margin-top: 2rem;
+    margin-top: 2rem;   
+    margin-bottom: 2rem;
+
     // padding:0 10rem 0 10rem;
     display: flex;
     flex-flow:row nowrap;
@@ -9,7 +32,6 @@
     gap: 10px;
     
 }
-
 @media screen and (max-width:1000px) {
     #content-container{
         flex-flow: column wrap;
