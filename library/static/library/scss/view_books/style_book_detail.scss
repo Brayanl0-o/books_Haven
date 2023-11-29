@@ -43,20 +43,21 @@
             text-align: left;
             font-size: 1em;
             li{
+                margin-top: 1.5rem;
+
                 .links-dowload-book{
-                 
                     width: 100%;
                     display: inline-block;
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
-                    // background-color: rebeccapurple;
                 }
+
             }
 
-            li:nth-last-child(1),li:nth-last-child(2){
-                margin-top: 1.5rem;
-            }
+            // li:nth-last-child(1),li:nth-last-child(2){
+            //     margin-top: 1.5rem;
+            // }
             span{
                 font-weight: 700;
             }
