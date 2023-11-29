@@ -4,6 +4,7 @@ section#container-books {
   display: flex;
   flex-flow: column wrap;
   width: 80%;
+  min-height: auto;
   height: auto;
 }
 section#container-books h4 {
@@ -109,6 +110,62 @@ section#container-books h4 {
   margin-bottom: 5rem;
 }
 
+.empty {
+  background-color: rgba(112, 111, 111, 0.2862745098);
+  padding: 20px;
+  width: 50%;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: -10px 10px rgb(50, 51, 51);
+  border-radius: 5px;
+}
+.empty .first-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.empty .second-title {
+  font-size: 1.5rem;
+}
+.empty .emoji-404 {
+  margin: 20px;
+  position: relative;
+  animation: mymove 2.5s infinite;
+}
+.empty button {
+  border: 1px rgb(37, 37, 37) solid;
+  border-radius: 5px;
+  box-shadow: -4px 4px rgb(50, 51, 51);
+  background-color: #e2e2e2;
+  margin-top: 5%;
+  padding: 15px;
+  cursor: pointer;
+}
+.empty button:hover {
+  background-color: #555555;
+  color: rgb(255, 208, 0);
+  transition: 0.5s;
+  box-shadow: 0px 0px rgb(50, 51, 51);
+}
+@keyframes mymove {
+  33% {
+    top: 0px;
+  }
+  66% {
+    top: 20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .empty {
+    padding: 10px 0 10px 0;
+  }
+}
 #container-book-detail {
   width: 70%;
   min-height: 50vh;
@@ -152,15 +209,15 @@ section#container-books h4 {
   text-align: left;
   font-size: 1em;
 }
+#container-book-detail .detail ul li {
+  margin-top: 1.5rem;
+}
 #container-book-detail .detail ul li .links-dowload-book {
   width: 100%;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-#container-book-detail .detail ul li:nth-last-child(1), #container-book-detail .detail ul li:nth-last-child(2) {
-  margin-top: 1.5rem;
 }
 #container-book-detail .detail ul span {
   font-weight: 700;
@@ -664,6 +721,22 @@ section#container-books h4 {
   border: none;
   cursor: pointer;
 }
+.container-author-form .list .buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-top: 0rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.container-author-form .list .buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 758px) {
   .container-author-form form {
@@ -1070,6 +1143,11 @@ input[type=checkbox] {
 }
 .categories-container .box img {
   margin: 15px;
+  width: 60px;
+}
+.categories-container .box h4 {
+  font-size: 1.1vw;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
@@ -1330,8 +1408,26 @@ section#container-new-authors .card-authors .authors .button img {
     margin-bottom: 10%;
   }
 }
+body {
+  min-height: auto;
+  height: 100vh;
+  font-family: "Noto Serif", serif;
+  background-color: #bdbdbd;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
 #content-container {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -1348,11 +1444,13 @@ footer {
   background-color: rgb(207, 123, 13);
   min-width: auto;
   height: auto;
-  margin-top: 2%;
+  margin-top: 3%;
   margin-bottom: 0%;
   width: 100%;
+  margin-top: auto;
 }
 footer .container-footer {
+  margin-top: 10%;
   display: flex;
   flex-flow: nowrap row;
   justify-content: space-between;
@@ -1451,15 +1549,6 @@ footer .end span {
   #container-description {
     display: none;
   }
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: auto;
-  height: 100vh;
-  font-family: "Noto Serif", serif;
-  background-color: #bdbdbd;
 }
 
 /*# sourceMappingURL=index.css.map */
