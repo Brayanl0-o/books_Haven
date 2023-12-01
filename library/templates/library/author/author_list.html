@@ -25,12 +25,11 @@
         </div>
     {%if author_list%}
         <div class="list">
-            <ul>
+            <div class="container-authors">
                 {% for author in author_list %}
-                <li>
+                <div class="container-author">
                     <a href="{% url 'author-detail' author.id %}">
                         <img loading="lazy" src="{{ author.photo_author }} " width="50" height="50" alt=""> 
-                        {% comment %} <p>{{ author.photo_author }}</p>   {% endcomment %}
                     <div class="info-author">
                             <h2> {{ author.name }}</h2>
                             <p> {{ author.birth_date }}</p>
@@ -38,11 +37,11 @@
                     </div>
 
                     </a>
-                </li>
+                </div>
                 {% empty %}
                 <li>No hay autores disponibles.</li>
                 {% endfor %}
-            </ul>
+            </div>
         </div>
         {%else%}
         <div class="empty">
