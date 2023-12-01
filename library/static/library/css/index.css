@@ -420,21 +420,21 @@ section#container-books h4 {
   height: auto;
   margin-top: 20px;
 }
-#container-author-list .list ul {
+#container-author-list .list .container-authors {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
-#container-author-list .list ul li {
+#container-author-list .list .container-authors .container-author {
   list-style: none;
   width: auto;
-  min-width: 24%;
+  min-width: 18%;
   min-height: 100px;
   max-height: 100px;
 }
-#container-author-list .list ul li a {
+#container-author-list .list .container-authors .container-author a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -448,19 +448,19 @@ section#container-books h4 {
   border-radius: 50px;
   width: 100%;
 }
-#container-author-list .list ul li a img {
+#container-author-list .list .container-authors .container-author a img {
+  background-color: antiquewhite;
   border-radius: 50%;
-  margin-left: 10px;
-  width: 40px;
+  width: 50px;
   min-width: 40px;
   height: 50px;
 }
-#container-author-list .list ul li a .info-author {
-  min-width: 70%;
-  max-width: 70%;
+#container-author-list .list .container-authors .container-author a .info-author {
+  min-width: 50%;
+  max-width: 80%;
   margin-bottom: 10px;
 }
-#container-author-list .list ul li a .info-author h2 {
+#container-author-list .list .container-authors .container-author a .info-author h2 {
   text-align: center;
   padding: 10px;
   margin: auto;
@@ -470,13 +470,16 @@ section#container-books h4 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#container-author-list .list ul li a .info-author p {
+#container-author-list .list .container-authors .container-author a .info-author p {
   font-size: small;
   text-align: center;
 }
-#container-author-list .list ul li a:hover {
+#container-author-list .list .container-authors .container-author a:hover {
   border: 2px solid rgba(255, 255, 255, 0.651);
   background-color: rgba(163, 163, 163, 0.692);
+}
+#container-author-list .list .container-authors .container-author a:hover img {
+  transform: scale(1.4);
 }
 
 #container-author-detail {
@@ -649,6 +652,7 @@ section#container-books h4 {
   min-height: auto;
   min-width: auto;
   max-width: 80%;
+  margin-bottom: 5%;
 }
 .container-author-form .head_cont {
   margin-bottom: 20px;
@@ -1416,13 +1420,21 @@ body {
   margin: 0;
   padding: 0;
 }
-
-#wrapper {
+body #wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   width: 100%;
+}
+body #content-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 85%;
+  gap: 10px;
 }
 
 #content-container {
