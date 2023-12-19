@@ -5,7 +5,12 @@ from django.urls import reverse
 from django.views import generic
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, DeleteView
+from django.shortcuts import get_object_or_404
 from ..models.book import Book
+from ..models.author import Author
+
+# from django.views.generic.edit import CreateView
+
 class BookListView(generic.ListView):
     """
     Vista genérica para mostrar una lista de libros.
@@ -42,7 +47,16 @@ class BookCreateView(generic.CreateView):
         'summary'
     ]
     template_name = 'library/book/book_create.html'
+    def form_valid(self, form):
+        # Sobrescribe el método form_valid para personalizar el comportamiento
+        response = super().form_valid(form)
 
+        # Asocia el libro con el autor
+        author_id = self.request.POST.get('author')
+        author = get_object_or_404(Author, pk=author_id)
+        author.books.add(self.object)
+
+        return response
 
 class BookEditView(UpdateView):
     """
