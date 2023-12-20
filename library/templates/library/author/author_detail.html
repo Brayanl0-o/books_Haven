@@ -19,10 +19,10 @@
 
         </ul>
 
-        <h3>Books of author:</h3>
+        <h3>Libros escritos: </h3>
         <ul>
             {% for book in author.books.all %}
-            <li>{{ book.name }}</li>
+            <li><a href="{%url 'book-detail'  pk=book.pk%}">{{ book.name }}</a></li>
             {% empty %}
             <li>No hay libros disponibles.</li>
             {% endfor %}
