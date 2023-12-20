@@ -11,7 +11,14 @@
         <h3> {{ book.name }}</h3>
 
         <ul>
-            <li><span>Autor:</span> {{ book.author }} </li>
+           
+            <li><span>Autor:</span> 
+                {% if book.author %}
+                        <a href="{%url 'author-detail' pk=book.author.pk %}">{{ book.author }} </a>
+                    {% else %}
+                        No hay un autor asociado.
+                {% endif %}
+            </li>
             <li><span>Fecha de lanzamiento:</span> {{ book.release_date }}</li>
             <li>{{ book.summary }}</li>
             <li> <span>Link de descarga gratis:</span> 
