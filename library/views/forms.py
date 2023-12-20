@@ -3,7 +3,7 @@ Control y validación de formularios.
 """
 from django import forms
 from ..models.book import Book
-
+from ..models.author import Author
 class BookForm(forms.ModelForm):
     """
     Formulario y validación.
@@ -32,3 +32,17 @@ class BookForm(forms.ModelForm):
         if number_pages is not None and number_pages < 1:
             raise forms.ValidationError("El número de páginas debe ser igual o mayor que 1.")
         return number_pages
+
+
+class AuthorForm(forms.ModelForm):
+    class Meta:
+        model = Author
+        fields = [
+            'name',
+            'birth_date',
+            'death_date',
+            'biography',
+            'photo_author',
+            'books'
+        ]
+ 
