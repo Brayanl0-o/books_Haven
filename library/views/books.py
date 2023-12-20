@@ -58,6 +58,17 @@ class BookEditView(UpdateView):
     model = Book
     template_name = 'library/book/book_edit.html'
     fields = ['name', 'author','cover_page' , 'link_dowload_free','link_dowload_buy', 'genre', 'release_date', 'number_pages', 'summary']
+    def form_valid(self, form):
+        # Sobrescribe el método form_valid para personalizar el comportamiento
+        response = super().form_valid(form)
+
+        # Asocia el libro con el autor
+        author_id = self.request.POST.get('author')
+        if author_id:
+            author = get_object_or_404(Author, pk=author_id)
+            author.books.add(self.object)
+
+        return response
     def get_success_url(self):
         book_pk = self.object.pk
         return reverse('book-detail', kwargs={'pk': book_pk})
