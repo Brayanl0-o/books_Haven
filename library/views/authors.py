@@ -5,7 +5,7 @@ from django.views import generic
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, DeleteView
 from ..models.author import Author
-
+from .forms import AuthorForm
 
 class AuthorListView(generic.ListView):
     """
@@ -31,16 +31,28 @@ class AuthorCreateView(generic.CreateView):
     """
     model = Author
     context_object_name = 'author'
-    fields = [
-        'name',
-        'birth_date',
-        'death_date',
-        'biography',
-        'photo_author',
-        'books'
-    ]
+    form_class = AuthorForm
+    # fields = [
+    #     'name',
+    #     'birth_date',
+    #     'death_date',
+    #     'biography',
+    #     'photo_author',
+    #     'books'
+    # ]
+    
     template_name = 'library/author/author_create.html'
+    def form_valid(self, form):
+        # Sobrescribe el método form_valid para personalizar el comportamiento
+        response = super().form_valid(form)
 
+        # Asocia el libro con el autor
+        author_id = self.request.POST.get('author')
+        if author_id:
+            author = get_object_or_404(Author, pk=author_id)
+            author.books.add(self.object)
+
+        return response
 
 class AuthorEditView(UpdateView):
     """
