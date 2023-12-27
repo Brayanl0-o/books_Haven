@@ -6,7 +6,6 @@ Este módulo define el modelo Author que representa a los autores de libros.
 from django.db import models
 from django.urls import reverse
 
-
 class Author(models.Model):
     """
     Modelo que representa a un autor de libros.
