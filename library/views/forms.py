@@ -33,16 +33,33 @@ class BookForm(forms.ModelForm):
             raise forms.ValidationError("El número de páginas debe ser igual o mayor que 1.")
         return number_pages
 
-
 class AuthorForm(forms.ModelForm):
     class Meta:
         model = Author
-        fields = [
-            'name',
-            'birth_date',
-            'death_date',
-            'biography',
-            'photo_author',
-            'books'
-        ]
- 
+        fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author']
+
+
+# class AuthorForm(forms.ModelForm):
+#     class Meta:
+#         model = Author
+#         fields = [
+#             'name',
+#             'birth_date',
+#             'death_date',
+#             'biography',
+#             'photo_author',
+#             'books'
+#         ]
+#     def save(self, commit =True):
+#         instance = super().save(commit=False)
+
+
+#         if commit:
+#             instance.save()
+
+#         instance.books.set(self.cleaned_data['books'])
+
+#         if commit:
+#             instance.save()
+#         return instance 
+  
