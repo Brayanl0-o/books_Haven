@@ -60,8 +60,7 @@ class AuthorEditView(UpdateView):
     """
     model = Author
     template_name = 'library/author/author_edit.html'
-    fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author',
-              'books']
+    fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author']
     success_url = reverse_lazy('authors')
 
 
