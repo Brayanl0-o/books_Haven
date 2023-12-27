@@ -38,12 +38,8 @@
             </div>
            
             <br>
-            <br>
-            <div class="form-group full-row" >
-                <label for="{{ form.books.id_for_label }}">Libros: </label>
-                {{ form.books }}
-            </div>
-
+           
+        
             <div class="buttons-author" >
                 <button onclick="window.location.href=`{% url 'author-detail' pk=author.pk %}`">
                     <span class="material-symbols-outlined">
