@@ -2,17 +2,30 @@
     // min-height: 70vh;
     // background-color: red;
     width: 90%;
-    margin:auto;
+    margin-top: -2%;
+   
+    .buttons{
+        margin: auto;
+        border-bottom: 1px black solid ;
+        width: max-content;
+        gap: 0;
 
-    h4{
-        font-size: 2rem;
-        text-align: center;
+        h4{
+            padding-right: 5px;
+            border-right: 1px black solid ;
+            font-size: 2rem;
+            text-align: center;
+        }
+        button{
+            margin-left: 5px;
+            text-align: center;
+        }
     }
 
     .list {
         height: auto;
         // background-color: aqua;
-        margin-top: 20px;
+        margin-top: 2%;
 
         .container-authors{
             display: flex;
