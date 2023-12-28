@@ -19,7 +19,20 @@
                         No hay un autor asociado.
                 {% endif %}
             </li>
-            <li><span>Fecha de lanzamiento:</span> {{ book.release_date }}</li>
+            <li><span>Fecha de lanzamiento:</span> 
+                {% if book.release_date %}
+                        {{ book.release_date }}
+                    {% else %}
+                        No añadida.
+                {% endif%}
+            </li>
+            <li><span>Paginas:</span> 
+                {% if book.number_pages %}
+                        {{ book.number_pages }}
+                    {% else %}
+                        No añadido.
+                {% endif%}
+            </li>
             <li>{{ book.summary }}</li>
             <li> <span>Link de descarga gratis:</span> 
                 {% if book.link_dowload_free != 'No hay enlace' %}
