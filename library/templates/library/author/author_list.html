@@ -6,23 +6,23 @@
 
 <div id="container-author-list">
 
-        <h4>List Authors</h4>
- 
         <div class="buttons" >
-            <button onclick="window.location.href=`{% url 'index'  %}`">
+            {% comment %} <button onclick="window.location.href=`{% url 'index'  %}`">
                 <span class="material-symbols-outlined">
                     arrow_back
                 </span>
-            </button> 
-        
-        
+            </button>  {% endcomment %}
+
+            <h4>Lista de Autores</h4>
+            
             <button onclick="window.location.href=`{% url 'create-author'  %}`" >
-                <span class="material-symbols-outlined">
+                <span class="add_circle material-symbols-outlined">
                     add_circle
-                    </span>
+                </span>
             </button>
         
         </div>
+
     {%if author_list%}
         <div class="list">
             <div class="container-authors">
