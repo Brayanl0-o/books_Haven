@@ -5,11 +5,24 @@ section#container-books{
     width: 80%;
     min-height: auto;
     height: auto;
+    margin-top: -2%;
     
-    h4{
-        font-size: 2rem;
-        text-align: center;
-        color: $text-color-secondary;
+    .buttons{
+        margin: auto;
+        border-bottom: 1px black solid ;
+        width: max-content;
+        gap: 0;
+
+        h4{
+            padding-right: 5px;
+            border-right: 1px black solid ;
+            font-size: 2rem;
+            text-align: center;
+        }
+        button{
+            margin-left: 5px;
+            text-align: center;
+        }
     }
 }
 
