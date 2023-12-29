@@ -31,7 +31,7 @@ class AuthorCreateView(generic.CreateView):
     """
     model = Author
     context_object_name = 'author'
-    form_class = AuthorForm
+    fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author']
     # fields = [
     #     'name',
     #     'birth_date',
