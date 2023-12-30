@@ -5,7 +5,7 @@ from django.views import generic
 from django.urls import reverse_lazy, reverse
 from django.views.generic.edit import UpdateView, DeleteView
 from ..models.author import Author
-from .forms import AuthorForm
+from .forms import AuthorForm, BookForm
 
 class AuthorListView(generic.ListView):
     """
@@ -31,17 +31,10 @@ class AuthorCreateView(generic.CreateView):
     """
     model = Author
     context_object_name = 'author'
-    fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author']
-    # fields = [
-    #     'name',
-    #     'birth_date',
-    #     'death_date',
-    #     'biography',
-    #     'photo_author',
-    #     'books'
-    # ]
-    
+    # fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author']
+    form_class = AuthorForm
     template_name = 'library/author/author_create.html'
+    
     def form_valid(self, form):
         # Sobrescribe el método form_valid para personalizar el comportamiento
         response = super().form_valid(form)
@@ -73,6 +66,5 @@ class AuthorDeleteView(DeleteView):
     """
     model = Author
     template_name = 'library/author/author_delete.html'
-    fields = ['name', 'birth_date', 'death_date', 
-              'books']
+    fields = ['name', 'birth_date', 'death_date']
     success_url = reverse_lazy('authors')
