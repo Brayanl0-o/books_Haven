@@ -2,7 +2,7 @@
 Vistas genericas para administrar los autores
 """
 from django.views import generic
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic.edit import UpdateView, DeleteView
 from ..models.author import Author
 from .forms import AuthorForm
@@ -61,7 +61,10 @@ class AuthorEditView(UpdateView):
     model = Author
     template_name = 'library/author/author_edit.html'
     fields = ['name', 'birth_date', 'death_date', 'biography', 'photo_author']
-    success_url = reverse_lazy('authors')
+    
+    def get_success_url(self):
+        author_pk = self.object.pk
+        return reverse('author-detail', kwargs={'pk': author_pk})
 
 
 class AuthorDeleteView(DeleteView):
