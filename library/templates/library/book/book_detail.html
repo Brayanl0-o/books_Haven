@@ -53,11 +53,11 @@
 
         
         <div class="buttons" >
-            <button onclick="window.location.href=`{% url 'books'  %}`">
+            {% comment %} <button onclick="window.location.href=`{% url 'books'  %}`">
                 <span class="material-symbols-outlined">
                     arrow_back
                 </span>
-            </button> 
+            </button>  {% endcomment %}
 
             <button onclick="window.location.href=`{% url 'book-edit' pk=book.pk %}`">
                 <span class="material-symbols-outlined">
