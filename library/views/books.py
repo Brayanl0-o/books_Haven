@@ -36,7 +36,8 @@ class BookCreateView(generic.CreateView):
     """
     model = Book
     context_object_name = 'book'
-    form_class = BookForm
+    fields = ['name', 'author','cover_page' , 'link_dowload_free','link_dowload_buy', 'genre', 'release_date', 'number_pages', 'summary']
+
     template_name = 'library/book/book_create.html'
 
     def form_valid(self, form):
