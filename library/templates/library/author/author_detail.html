@@ -12,9 +12,26 @@
         <h2> {{ author.name }}</h2>
 
         <ul>
-            <li><span>Fecha de lanzamiento:</span> {{ author.birth_date }}</li>
-            <li><span>Fecha de lanzamiento:</span> {{ author.death_date }}</li>
-            <li>{{ author.biography }}</li>
+            <li><span>Fecha de nacimiento:</span> 
+                {% if author.birh_date %}
+                    {{ author.birth_date }}
+                {% else %}
+                    No tiene.
+                {% endif %}
+            </li>
+            <li><span>Fecha de muerte:</span> 
+                {% if author.death_date %}
+                    {{ author.death_date }}
+                {% else %}
+                    No tiene.
+                {% endif %}
+            </li>
+            <li>
+            {% if author.death_date %}
+                {{ author.biography }}
+            {% else %}
+                Sin biografia.
+            {% endif %}</li>
             {% comment %} <li>{{ author.biography|default:"{% lorem 50 w %}" }}</li> {% endcomment %}
 
         </ul>
@@ -29,11 +46,11 @@
         </ul>
         
         <div class="buttons" >
-            <button onclick="window.location.href=`{% url 'index'  %}`">
+            {% comment %} <button onclick="window.location.href=`{% url 'index'  %}`">
                 <span class="material-symbols-outlined">
                     arrow_back
                 </span>
-            </button> 
+            </button>  {% endcomment %}
     
             <button onclick="window.location.href=`{% url 'author-edit' pk=author.pk %}`">
                 <span class="material-symbols-outlined">
