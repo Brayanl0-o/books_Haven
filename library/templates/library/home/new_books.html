@@ -13,13 +13,23 @@
                 <div class="descriptions">
                     <h1> {{ book.name }}</h1>
                     <p>
-                        {{book.summary}}
-                
+                        {% if book.summary %}
+                            {{book.summary}}
+                            {% else %}
+                        {% endif %}
+                       
                         <br><br>
-                        {{ book.author}}    
+                        {% if book.author %}
+                            {{ book.author}}
+                            {% else %}
+                        {% endif %}
+                            
                         <br><br>
-                    
-                        {{book.release_date}}           
+                        {% if book.release_date %}
+                            {{book.release_date}} 
+                            {% else %}
+                        {% endif %}
+                               
                     
                     </p>
                     <button>
