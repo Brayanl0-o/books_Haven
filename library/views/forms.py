@@ -24,14 +24,29 @@ class BookForm(forms.ModelForm):
             'number_pages',
             'summary'
         ]
-    def clean_number_pages(self):
-        """
-        Validacion campo paginas.
-        """
-        number_pages = self.cleaned_data['number_pages']
-        if number_pages is not None and number_pages < 1:
-            raise forms.ValidationError("El número de páginas debe ser igual o mayor que 1.")
-        return number_pages
+    # def save(self, commit=True):
+    #     # Desvincula el libro del autor anterior antes de guardar
+    #     old_author = self.instance.author
+    #     if old_author:
+    #         old_author.books.remove(self.instance)
+    #         print(f"Libro desvinculado del autor anterior: {self.instance} del autor: {old_author.name}")
+    #     # Guarda el formulario y el libro
+    #     book = super().save(commit=commit)
+
+    #     # Asocia el libro con el nuevo autor
+    #     new_author = self.cleaned_data['author']
+    #     new_author.books.add(book)
+    #     print(f"Libro asociado al nuevo autor: {self.instance} al autor: {new_author}")
+        
+    #     return book
+    # def clean_number_pages(self):
+    #     """
+    #     Validacion campo paginas.
+    #     """
+    #     number_pages = self.cleaned_data['number_pages']
+    #     if number_pages is not None and number_pages < 1:
+    #         raise forms.ValidationError("El número de páginas debe ser igual o mayor que 1.")
+    #     return number_pages
 
 class AuthorForm(forms.ModelForm):
     class Meta:
