@@ -18,7 +18,7 @@ config.json
 data/
 
 # Archivos de dependencias
-requirements.txt
+# requirements.txt
 
 # Archivos de caché y registros de IDE
 .idea/
