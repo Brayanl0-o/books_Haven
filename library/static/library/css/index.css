@@ -6,11 +6,23 @@ section#container-books {
   width: 80%;
   min-height: auto;
   height: auto;
+  margin-top: -2%;
 }
-section#container-books h4 {
+section#container-books .buttons {
+  margin: auto;
+  border-bottom: 1px black solid;
+  width: max-content;
+  gap: 0;
+}
+section#container-books .buttons h4 {
+  padding-right: 5px;
+  border-right: 1px black solid;
   font-size: 2rem;
   text-align: center;
-  color: chocolate;
+}
+section#container-books .buttons button {
+  margin-left: 5px;
+  text-align: center;
 }
 
 .wrapper-card {
@@ -268,29 +280,33 @@ section#container-books h4 {
 }
 .modal-delete-book .modal-content p {
   color: #363636;
-  margin-bottom: 25px;
+  margin-bottom: 10%;
 }
 .modal-delete-book .modal-content button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #ccc;
-  border: none;
-  cursor: pointer;
-}
-.modal-delete-book .modal-content button:hover {
-  background: #ddd;
-}
-.modal-delete-book .modal-content a {
-  margin-top: 10px;
   padding: 8px 16px;
   background: #a82c1e;
+  font-size: medium;
   color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.modal-delete-book .modal-content button:hover {
+  background: #ff1900;
+  transform: scale(1.2);
+}
+.modal-delete-book .modal-content a {
+  margin-left: 5px;
+  background: #ccc;
+  font-size: medium;
+  padding: 8px 16px;
+  color: black;
   text-decoration: none;
   border: none;
   cursor: pointer;
 }
 .modal-delete-book .modal-content a:hover {
-  background: #ff1900;
+  background: #ddd;
 }
 
 @media screen and (max-width: 1000px) {
@@ -347,13 +363,15 @@ section#container-books h4 {
   }
 }
 .container-book-form {
-  margin: 20px;
+  margin: auto;
+  margin-bottom: 10%;
   padding: 20px;
   border: 1px solid #868686;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  min-height: 90vh;
+  min-height: auto;
   max-width: 90%;
+  position: relative;
 }
 .container-book-form .head_cont {
   margin-bottom: 20px;
@@ -399,9 +417,15 @@ section#container-books h4 {
 }
 .container-book-form .list form .buttons {
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
 }
 
+@media screen and (max-width: 680px) {
+  .form-group:last-child {
+    margin-bottom: 10rem;
+    color: red;
+  }
+}
 @media screen and (max-width: 358px) {
   .container-book-form {
     margin: auto;
@@ -410,15 +434,27 @@ section#container-books h4 {
 }
 #container-author-list {
   width: 90%;
-  margin: auto;
+  margin-top: -2%;
 }
-#container-author-list h4 {
+#container-author-list .buttons {
+  margin: auto;
+  border-bottom: 1px black solid;
+  width: max-content;
+  gap: 0;
+}
+#container-author-list .buttons h4 {
+  padding-right: 5px;
+  border-right: 1px black solid;
   font-size: 2rem;
+  text-align: center;
+}
+#container-author-list .buttons button {
+  margin-left: 5px;
   text-align: center;
 }
 #container-author-list .list {
   height: auto;
-  margin-top: 20px;
+  margin-top: 2%;
 }
 #container-author-list .list .container-authors {
   display: flex;
@@ -479,7 +515,7 @@ section#container-books h4 {
   background-color: rgba(163, 163, 163, 0.692);
 }
 #container-author-list .list .container-authors .container-author a:hover img {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 #container-author-detail {
@@ -562,29 +598,33 @@ section#container-books h4 {
 }
 .modal-delete-author .modal-content p {
   color: #363636;
-  margin-bottom: 25px;
+  margin-bottom: 10%;
 }
 .modal-delete-author .modal-content button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #ccc;
-  border: none;
-  cursor: pointer;
-}
-.modal-delete-author .modal-content button:hover {
-  background: #ddd;
-}
-.modal-delete-author .modal-content a {
-  margin-top: 10px;
   padding: 8px 16px;
   background: #a82c1e;
+  font-size: medium;
   color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.modal-delete-author .modal-content button:hover {
+  background: #ff1900;
+  transform: scale(1.2);
+}
+.modal-delete-author .modal-content a {
+  margin-left: 5px;
+  background: #ccc;
+  font-size: medium;
+  padding: 8px 16px;
+  color: black;
   text-decoration: none;
   border: none;
   cursor: pointer;
 }
 .modal-delete-author .modal-content a:hover {
-  background: #ff1900;
+  background: #ddd;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1427,15 +1467,6 @@ body #wrapper {
   min-height: 100vh;
   width: 100%;
 }
-body #content-container {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  width: 85%;
-  gap: 10px;
-}
 
 #content-container {
   margin-top: 2rem;
@@ -1449,6 +1480,7 @@ body #content-container {
 
 @media screen and (max-width: 1000px) {
   #content-container {
+    width: 100%;
     flex-flow: column wrap;
   }
 }
