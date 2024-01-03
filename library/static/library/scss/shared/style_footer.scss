@@ -8,7 +8,7 @@ footer{
     margin-top: auto;
 
     .container-footer{
-       margin-top: 10%;
+        margin-top: 10%;
         display: flex;
         flex-flow: nowrap row;
         justify-content: space-between;
@@ -18,22 +18,22 @@ footer{
         background-color: rgb(26, 23, 23);
         color: wheat;
         width: 100%;
+        
         section#container-description{
-            background-color: rgba(0, 0, 0, 0);
             text-align: start;
-            width: 30vh;
-            max-width: 40vh;
+            width: 30%;
             padding: 1rem;
 
             h5{
                 text-align: start;
-                font-size: 10px;
+                font-size: 15px;
                 padding-bottom: 10px;
             }
             p{
                 text-align: start;
                 font-size: x-small;
                 padding-bottom: 10px;
+                line-height: 140%;
             }
         }
        
@@ -56,20 +56,27 @@ footer{
     
         .list-container{
             text-align: start;
-            max-width: 20vh;
+            display: flex;
+            justify-content:space-between;
+            flex-flow: column wrap;
+            width: 30%;
+            max-width: min-content;
             padding: 1rem;
             
             h6{
-                margin-bottom: 0.8rem;
+                margin-bottom: 2rem;
                 font-size: large;
             }
             ul{
                 list-style: none;
                 font-size: small;
             }
-            ul>li{
-                padding: 0.5rem;
+            ul>li:first-child{
+                font-size:small ;
+                width: max-content;
+                margin-bottom: 10px;
             }
+            
         }
     }
 
@@ -124,8 +131,9 @@ footer{
     }
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:500px) {
     #container-description{
         display: none;
     }
+    
 }
