@@ -22,5 +22,5 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('library/', include('library.urls'))
+    path('', include('library.urls'))
 ]
