@@ -718,6 +718,7 @@ section#container-books .buttons button {
 }
 .container-author-form .list form .form-group label {
   display: block;
+  font-size: 0.8rem;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -784,13 +785,12 @@ section#container-books .buttons button {
 
 @media screen and (max-width: 758px) {
   .container-author-form form {
-    min-width: 90vh;
+    min-width: 50vh;
   }
 }
-@media screen and (max-width: 358px) {
+@media screen and (max-width: 458px) {
   .container-author-form {
-    margin: auto;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 * {
@@ -1503,24 +1503,23 @@ footer .container-footer {
   padding: 0.5rem;
   background-color: rgb(26, 23, 23);
   color: wheat;
-  width: 100%;
+  width: auto;
 }
 footer .container-footer section#container-description {
-  background-color: rgba(0, 0, 0, 0);
   text-align: start;
-  width: 30vh;
-  max-width: 40vh;
+  width: 30%;
   padding: 1rem;
 }
 footer .container-footer section#container-description h5 {
   text-align: start;
-  font-size: 10px;
+  font-size: 15px;
   padding-bottom: 10px;
 }
 footer .container-footer section#container-description p {
   text-align: start;
   font-size: x-small;
   padding-bottom: 10px;
+  line-height: 140%;
 }
 footer .container-footer .logo-container {
   display: flex;
@@ -1537,20 +1536,24 @@ footer .container-footer .logo-container h1, footer .container-footer .logo-cont
   padding: 2px;
 }
 footer .container-footer .list-container {
-  text-align: start;
-  max-width: 20vh;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  width: 30%;
+  max-width: min-content;
   padding: 1rem;
 }
 footer .container-footer .list-container h6 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
   font-size: large;
 }
 footer .container-footer .list-container ul {
   list-style: none;
   font-size: small;
 }
-footer .container-footer .list-container ul > li {
-  padding: 0.5rem;
+footer .container-footer .list-container ul > li:first-child {
+  width: max-content;
+  margin-bottom: 10px;
 }
 footer .end {
   display: flex;
@@ -1580,18 +1583,27 @@ footer .end span {
   }
 }
 @media screen and (max-width: 500px) {
-  .container-footer {
-    width: auto;
-    background-color: aqua;
+  footer .container-footer {
+    width: 100%;
+    justify-content: space-around;
     font-size: smaller;
   }
-  .social-networks img {
-    min-width: 1rem;
-  }
-}
-@media screen and (max-width: 350px) {
-  #container-description {
+  footer .container-footer #container-description {
     display: none;
+  }
+  footer .container-footer .list-container {
+    justify-content: center;
+    width: 100%;
+  }
+  footer .container-footer .list-container h6 {
+    margin-bottom: 2rem;
+    font-size: smaller;
+  }
+  footer .container-footer .list-container ul {
+    font-size: smaller;
+  }
+  footer .social-networks img {
+    min-width: 1rem;
   }
 }
 
