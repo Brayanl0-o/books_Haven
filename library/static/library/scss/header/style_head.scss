@@ -39,7 +39,16 @@
 }
 @media screen and (max-width:500px) {
     .head {
-        width:100%;
-     
+        width:90%;
+        a{
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:350px) {
+    .head {
+        width:80%;
     }
 }
