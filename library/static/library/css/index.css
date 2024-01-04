@@ -793,14 +793,6 @@ section#container-books .buttons button {
     max-width: 100%;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  font-family: "Oswald", sans-serif;
-}
-
 .wrapper {
   z-index: 100;
   position: fixed;
@@ -935,6 +927,11 @@ input[type=checkbox] {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 350px) {
+  .menu-btn {
+    right: 6px;
+  }
+}
 .container-head {
   width: 100%;
   background-color: #f6f6f6;
@@ -969,7 +966,15 @@ input[type=checkbox] {
 
 @media screen and (max-width: 500px) {
   .head {
-    width: 100%;
+    width: 90%;
+  }
+  .head a h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .head {
+    width: 80%;
   }
 }
 #new_books {
@@ -1452,6 +1457,14 @@ section#container-new-authors .card-authors .authors .button img {
     margin-bottom: 10%;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+
 body {
   min-height: auto;
   height: 100vh;
