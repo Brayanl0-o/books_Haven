@@ -1507,7 +1507,6 @@ footer {
   margin-top: auto;
 }
 footer .container-footer {
-  margin-top: 10%;
   display: flex;
   flex-flow: nowrap row;
   justify-content: space-between;
@@ -1520,8 +1519,10 @@ footer .container-footer {
 }
 footer .container-footer section#container-description {
   text-align: start;
-  width: 30%;
+  width: 20%;
   padding: 1rem;
+  position: absolute;
+  left: 0;
 }
 footer .container-footer section#container-description h5 {
   text-align: start;
@@ -1540,13 +1541,10 @@ footer .container-footer .logo-container {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 footer .container-footer .logo-container img {
   margin-bottom: 5px;
-}
-footer .container-footer .logo-container h1, footer .container-footer .logo-container h4 {
-  font-size: 1rem;
-  padding: 2px;
 }
 footer .container-footer .list-container {
   display: flex;
@@ -1590,15 +1588,33 @@ footer .end span {
   width: auto;
 }
 
-@media screen and (max-width: 1008px) {
+@media screen and (max-width: 1208px) {
+  #container-description {
+    width: 100%;
+    min-width: 35vh;
+  }
+  .logo-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+  }
+  .logo-container img {
+    margin-bottom: 5px;
+  }
+  .logo-container h1, .logo-container h4 {
+    font-size: 1rem;
+    padding: 2px;
+  }
   .social-networks img {
     min-width: 2rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 780px) {
   footer .container-footer {
     width: 100%;
-    justify-content: space-around;
     font-size: smaller;
   }
   footer .container-footer #container-description {
