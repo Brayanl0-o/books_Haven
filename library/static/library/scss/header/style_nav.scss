@@ -1,11 +1,11 @@
-* {
+// * {
   
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
-  font-family: 'Oswald', sans-serif;
-}
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   font-family: 'Lato', sans-serif;
+//   font-family: 'Oswald', sans-serif;
+// }
 
 .wrapper {
   z-index: 100;
@@ -151,5 +151,11 @@ input[type="checkbox"] {
 @media screen and (max-width:800px) {
   .wrapper ul li a {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .menu-btn {
+    right: 6px;
   }
 }
