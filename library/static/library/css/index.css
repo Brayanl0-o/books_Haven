@@ -426,10 +426,10 @@ section#container-books .buttons button {
     color: red;
   }
 }
-@media screen and (max-width: 358px) {
+@media screen and (max-width: 458px) {
   .container-book-form {
     margin: auto;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 #container-author-list {
