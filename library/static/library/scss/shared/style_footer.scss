@@ -8,7 +8,6 @@ footer{
     margin-top: auto;
 
     .container-footer{
-        margin-top: 10%;
         display: flex;
         flex-flow: nowrap row;
         justify-content: space-between;
@@ -21,8 +20,10 @@ footer{
         
         section#container-description{
             text-align: start;
-            width: 30%;
+            width: 20%;
             padding: 1rem;
+            position: absolute;
+            left: 0;
 
             h5{
                 text-align: start;
@@ -44,14 +45,11 @@ footer{
             justify-content: center;
             align-items: center;
             text-align: center;
-            
+            width: 100%;
             img{
                 margin-bottom: 5px;
             }
-            h1, h4{
-                font-size: 1rem;
-                padding: 2px;
-            }
+       
             
         }
     
@@ -108,7 +106,28 @@ footer{
 }
 
 
-@media screen and (max-width:1008px){
+@media screen and (max-width:1208px){
+    #container-description{
+        width: 100%;
+        min-width: 35vh;
+
+    }
+    .logo-container{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 70%;
+        img{
+            margin-bottom: 5px;
+        }
+        h1, h4{
+            font-size: 1rem;
+            padding: 2px;
+        }
+        
+    }
     .social-networks{
         img{
             min-width: 2rem;
@@ -116,17 +135,17 @@ footer{
         }
     }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:780px) {
     footer{
         .container-footer{
             width: 100%;
-            justify-content: space-around;
             font-size:smaller;
             
             #container-description{
                 display: none;
+
             }
-        
+           
             .list-container{
                 justify-content:center;
                 width: 100%;
