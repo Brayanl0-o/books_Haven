@@ -33,8 +33,10 @@
       
         .form-group {
           width: 100%;
+
           label {
             display: block;
+            font-size: 0.8rem;
             margin-bottom: 5px;
             font-weight: bold;
           }
@@ -117,19 +119,17 @@
   @media screen and (max-width:758px) {
     .container-author-form {
       form{
-        min-width: 90vh;
+        min-width: 50vh;
       }
-     
-    
      
       }
     }
-@media screen and (max-width:358px) {
-    .container-author-form {
-        margin: auto;
-        max-width: 90%;
-    
-     
+@media screen and (max-width:458px) {
+  
+      .container-author-form {
+        max-width: 100%;
+      
+
       }
     }
   
