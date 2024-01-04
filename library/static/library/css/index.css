@@ -967,9 +967,9 @@ input[type=checkbox] {
   padding: 10px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .head {
-    width: 80%;
+    width: 100%;
   }
 }
 #new_books {
@@ -1202,7 +1202,7 @@ input[type=checkbox] {
     width: 50%;
   }
 }
-@media screen and (max-width: 408px) {
+@media screen and (max-width: 500px) {
   .categories-container {
     display: none;
   }
