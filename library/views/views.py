@@ -11,7 +11,7 @@ from ..models.author import Author
 
 def index(request):
     """Function to home site"""
-    books = Book.objects.all()[:10]
+    books = Book.objects.all()[:5]
     users = User.objects.all()
     authors = Author.objects.all()[:20]
 
