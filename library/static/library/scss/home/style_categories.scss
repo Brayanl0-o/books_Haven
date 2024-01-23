@@ -4,64 +4,86 @@
     justify-content: center;
     width: 100%;
     // background-color: aqua;
+    background-color: rgba(19, 18, 18, 0.596);
     height: auto;
     text-align: center;
+    
     .box{
-        width: 100%;
+        width: 100%; 
         background-color: rgba(184, 184, 184, 0);
         box-shadow: 1px black ;
       
         ul{
+            width: 100%;
             display: flex;
             flex-flow: row nowrap;
-            list-style: none;
             align-items: center;
+            list-style: none;
+
             margin: 0;
-            width: 100%;
+            
            li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
-            width: auto;
-            width:fit-content;
-            padding: 5px 5px 5px 5px;
+            width: 100%;
+            height: fit-content;
+            min-height: 50px; 
+            max-height: 50px; 
+            padding: 5px 18px 5px 18px;
             color:white;
             text-align: center;
             border: 2px rgba(0, 0, 0, 0.795) solid;
             background-color: rgba(0, 0, 0, 0.712);
             transition: all 0.2s ease;
-            &:first-child{
-                padding: 14px 5px 14px 5px;
+            margin: auto;
 
-            }
+            // &:first-child{
+            //     padding: 14px 5px 14px 5px;
+
+            // }
             &:hover{
                 transform: scale(0.9);
             }
            }
         }
-        img{
-            margin:15px;
-            width: 60px;
-        }
-        h4{
-            font-size: 1.1vw;
-            font-weight:500;
-        }
+    
     }
 }
 
 @media screen and (max-width:768px) {
     .categories-container{
-        width: 80%;
+        width: 100%;
+        .box{
+            width: 100%; 
+            ul{
+                width: 100%;
+                flex-flow: row nowrap;
 
-        img{
-            width: 50%;
+               li{
+                font-size: 0.8rem;
+               }
+            }
         }
-     
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:590px) {
     .categories-container{
-      display: none;
-     
+        width: 100%;
+        .box{
+            width: 100%; 
+            ul{
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+
+               li{
+                width: 50%;
+                font-size: 0.9rem;
+               }
+            }
+        }
     }
 }
