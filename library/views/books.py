@@ -36,7 +36,7 @@ class BookCreateView(generic.CreateView):
     """
     model = Book
     context_object_name = 'book'
-    fields = ['name', 'author','cover_page' , 'link_dowload_free','link_dowload_buy', 'genre', 'release_date', 'number_pages', 'summary']
+    fields = ['name', 'author','category','cover_page' , 'link_dowload_free','link_dowload_buy', 'genre', 'release_date', 'number_pages', 'summary']
 
     template_name = 'library/book/book_create.html'
 
@@ -58,7 +58,7 @@ class BookEditView(UpdateView):
     """
     model = Book
     template_name = 'library/book/book_edit.html'
-    fields = ['name', 'author','cover_page' , 'link_dowload_free','link_dowload_buy', 'genre', 'release_date', 'number_pages', 'summary']
+    fields = ['name', 'author','category','cover_page' , 'link_dowload_free','link_dowload_buy', 'genre', 'release_date', 'number_pages', 'summary']
 
     def form_valid(self, form):
         # Obtiene el autor original antes de la edición
