@@ -52,7 +52,9 @@
                     white-space: nowrap;
                     text-overflow: ellipsis;
                 }
-
+                &:nth-child(2)>span:nth-child(2){
+                    margin-left: 15%;
+                }
             }
 
             // li:nth-last-child(1),li:nth-last-child(2){
