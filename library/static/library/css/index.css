@@ -231,6 +231,9 @@ section#container-books .buttons button {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+#container-book-detail .detail ul li:nth-child(2) > span:nth-child(2) {
+  margin-left: 15%;
+}
 #container-book-detail .detail ul span {
   font-weight: 700;
 }
@@ -1213,8 +1216,12 @@ input[type=checkbox] {
   transition: all 0.2s ease;
   margin: auto;
 }
-.categories-container .box ul li:hover {
+.categories-container .box ul li:active {
   transform: scale(0.9);
+}
+
+#results {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -1249,6 +1256,48 @@ input[type=checkbox] {
     font-size: 0.9rem;
   }
 }
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8705882353);
+  width: 100%;
+  height: 100vh;
+  z-index: 102;
+  overflow: hidden;
+}
+
+.results-categories {
+  position: fixed;
+  margin: auto;
+  inset: 0;
+  width: 80%;
+  height: max-content;
+  border: 1px solid black;
+  background-color: gray;
+  text-align: center;
+  z-index: 102;
+}
+.results-categories h1 {
+  margin: 0;
+  padding: 10px;
+  background-color: aliceblue;
+}
+.results-categories span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: red;
+}
+.results-categories ul {
+  list-style: none;
+  margin-bottom: 20%;
+  overflow: auto;
+}
+
 section#container-new-books {
   display: flex;
   flex-flow: column wrap;
