@@ -1,10 +1,10 @@
 {% load static %}
+<script src="{% static 'library/js/modal_results_categories.js' %}"></script>
 <hr width="100%" color="black" size="10px">
-
 <div class="categories-container">
   <div class="box">
     <ul>  
-      <li>Ficción
+      <li  class="show-results">Ficción
         <ul style="display:none;">
           <li>Novela contemporánea</li>
           <li>Novela clásica</li>
@@ -15,7 +15,7 @@
           <li>Aventura</li>
         </ul>
       </li>
-      <li>No Ficción
+      <li  class="show-results">No Ficción
         <ul  style="display:none;">
           <li>Biografías y memorias</li>
           <li>Historia</li>
@@ -27,7 +27,7 @@
           <li>Psicología</li>
         </ul>
       </li>
-      <li> Desarrollo Personal
+      <li  class="show-results"> Desarrollo Personal
         <ul  style="display:none;">
           <li>Autoayuda</li>
           <li>Desarrollo personal</li>
@@ -35,20 +35,20 @@
           <li>Motivación</li>
         </ul>
       </li>
-      <li>Idiomas y Aprendizaje
+      <li  class="show-results">Idiomas y Aprendizaje
         <ul  style="display:none;">
           <li>Libros de aprendizaje de idiomas</li>
           <li>Literatura en otros idiomas</li>
         </ul>
       </li> 
-      <li>Medio Ambiente 
+      <li  class="show-results">Medio Ambiente 
         <ul  style="display:none;">
           <li>Ecología</li>
           <li>Conservación</li>
           <li>Naturaleza</li>
         </ul>
       </li>
-      <li>Libros Clásicos
+      <li  class="show-results">Libros Clásicos
         <ul  style="display:none;">
           <li>Clásicos de la literatura</li>
         </ul>
@@ -56,6 +56,7 @@
     </ul> 
   </div>
 </div>
+<div id="results">{% include "library/partials/modal_results_Categories.html"%}</div>
 
    {% comment %} <li>Géneros Específicos
         <ul  style="display:none;">
