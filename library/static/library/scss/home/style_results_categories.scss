@@ -1,0 +1,41 @@
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000de;
+    width: 100%;
+    height: 100vh;
+    z-index: 102;
+    overflow: hidden; 
+}
+.results-categories{
+    position: fixed;
+    margin: auto;
+    inset: 0;
+    width: 80%;
+    height: max-content;
+    border: 1px solid black;
+    background-color: gray;
+    text-align: center;
+    z-index: 102;
+ 
+    h1{
+        margin: 0;
+        padding: 10px;
+        background-color: aliceblue;
+    }
+    span{
+        position: absolute;
+        right: 0;
+        top:0;
+        cursor: pointer;
+        font-size: 2.5rem;
+        font-weight:700;
+        background-color: red;
+    }
+    ul{
+        list-style: none;
+        margin-bottom: 20%;
+        overflow: auto;
+    }
+}
