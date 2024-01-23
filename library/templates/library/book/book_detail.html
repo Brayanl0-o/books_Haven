@@ -19,7 +19,15 @@
                         No hay un autor asociado.
                 {% endif %}
             </li>
-            <li><span>Genero:</span> 
+            
+            <li>
+                <span>Categoria:</span> 
+                {% if book.category %}
+                        {{ book.category }}
+                    {% else %}
+                        No añadida.
+                {% endif%}
+                <span>Genero:</span> 
                 {% if book.genre %}
                         {{ book.genre }}
                     {% else %}
