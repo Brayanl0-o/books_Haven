@@ -43,7 +43,10 @@
             //     padding: 14px 5px 14px 5px;
 
             // }
-            &:hover{
+            // &:hover{
+            //     transform: scale(0.9);
+            // }
+            &:active{
                 transform: scale(0.9);
             }
            }
@@ -51,7 +54,9 @@
     
     }
 }
-
+#results{
+    display: none;
+}
 @media screen and (max-width:768px) {
     .categories-container{
         width: 100%;
