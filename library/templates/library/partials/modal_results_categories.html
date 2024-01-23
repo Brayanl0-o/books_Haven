@@ -2,11 +2,127 @@
 <div class="background"></div>
 <div class="results-categories" >
     {% comment %} <header> <h1>CATEGORIAS</h1><span class="show-results">X</span></header> {% endcomment %}
-    <h1>CATEGORIAS</h1><span class="show-results">X</span>
-    <ul>
-        <li>one</li>
-        <li>one</li>
-        <li>one</li>
-        <li>one</li>
+    <h1>CATEGORIA {{ book.category }}</h1><span class="show-results">X</span>
+    <div class="container-search">
+        <input type="text" name="search" placeholder="Buscar en la lista">
+        <span class="material-symbols-outlined">
+            search
+        </span>
+    </div>
+    <h2>Resultados categoria {{ book.category }} </h2>
+
+    <ul class="titles">
+        <li>
+            <p>Titulo</p>
+            <p>Author</p>
+            <p>Author</p>
+            <p>Fecha de publicación</p>
+        </li>
+        
     </ul>
+
+    <div class="container-list">
+        <ul>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+                {% comment %} <p>
+                    
+                    {% if book.author %}
+                            {{ book.author}}
+                        {% else %}
+                    {% endif %}
+                
+                    {% if book.release_date %}
+                            {{book.release_date}} 
+                        {% else %}
+                    {% endif %}
+                
+                
+                </p> {% endcomment %}
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+            <li>
+                <h3> El hombre en busca de sentido{{ book.name }}</h3>
+                <p>Viktor frank</p>
+
+                <p>Viktor frank</p>
+                <p> 15/52/2000</p>
+            </li>
+        </ul>
+    </div>
 </div>
