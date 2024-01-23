@@ -23,6 +23,7 @@ class Book(models.Model):
 
     name = models.CharField(max_length=60)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, default='No hay un autor asociado', blank=True, null=True)
+    category = models.CharField(max_length=100,default='Sin categoria')
     cover_page = models.CharField(
         max_length=200,
         default='https://img.freepik.com/vector-premium/adorno-oro-sobre-fondo-cuero-puede-utilizar-como-tarjeta-invitacion-ilustracion-vectorial_443748-1466.jpg'
@@ -35,7 +36,7 @@ class Book(models.Model):
         max_length=250,
         default='No hay enlace'
     )
-    genre = models.CharField(max_length=100)
+    genre = models.CharField(max_length=80)
     release_date = models.DateField(null=True, blank=True)
     # release_date = models.IntegerField(default=0)
     number_pages = models.IntegerField(default=0, blank=True, null=True)
