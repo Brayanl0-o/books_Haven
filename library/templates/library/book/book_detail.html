@@ -19,6 +19,13 @@
                         No hay un autor asociado.
                 {% endif %}
             </li>
+            <li><span>Genero:</span> 
+                {% if book.genre %}
+                        {{ book.genre }}
+                    {% else %}
+                        No añadida.
+                {% endif%}
+            </li>
             <li><span>Fecha de lanzamiento:</span> 
                 {% if book.release_date %}
                         {{ book.release_date }}
