@@ -14,6 +14,8 @@ urlpatterns += [
     path("book/create/", books.BookCreateView.as_view(), name='create-book'),
     path('book/<int:pk>/edit/', books.BookEditView.as_view(), name='book-edit'),
     path('book/<int:pk>/delete/', books.BookDeleteView.as_view(), name='book-delete'),
+    path('book/books-for-category/<str:category>/', books.books_for_category, name='books-for-category'),
+    
     path("user/", users.UserListView.as_view(), name="users"),
     path("user/<int:pk>/", users.UserDetailView.as_view(), name='user-detail'),
     path("user/create/", users.UserCreateView.as_view(), name='create-user'),
