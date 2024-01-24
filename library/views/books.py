@@ -4,13 +4,43 @@ Vistas genericas para administrar los libros
 from django.urls import reverse
 from django.views import generic
 from django.urls import reverse_lazy
+from django.core.serializers import serialize
 from django.views.generic.edit import UpdateView, DeleteView
 from django.shortcuts import get_object_or_404
 from ..models.book import Book
 from ..models.author import Author
 from .forms import BookForm
-# from .forms import BookForm
-# from django.views.generic.edit import CreateView
+from django.http import JsonResponse
+from django.shortcuts import render
+import json
+
+def books_for_category(request, category):
+    # print("Category ID:", category)
+
+    filters_books = Book.objects.filter(category__iexact=category)
+    books_data = []
+
+    for book in filters_books:
+        
+        author_dict = {
+            'name': book.author.name if book.author else None 
+        }
+
+        book_data = {
+            'name': book.name,
+            'author': author_dict,
+            'release_date': book.release_date,
+            'cover_page': book.cover_page,
+            'link_dowload_free': book.link_dowload_free,
+            'link_dowload_buy': book.link_dowload_buy,
+            'genre': book.genre,
+            'number_pages': book.number_pages,
+            'summary': book.summary
+        }
+
+        books_data.append(book_data)
+
+    return JsonResponse({'books': books_data, 'category': category})
 
 class BookListView(generic.ListView):
     """
@@ -89,6 +119,6 @@ class BookDeleteView(DeleteView):
     """
     model = Book
     template_name = 'library/book/book_delete.html'
-    fields = ['fname', 'lname', 'document_type',
+    fields = ['name', 'document_type',
               'document_number', 'age']
     success_url = reverse_lazy('books')
