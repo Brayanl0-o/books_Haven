@@ -237,6 +237,11 @@ section#container-books .buttons button {
 #container-book-detail .detail ul span {
   font-weight: 700;
 }
+#container-book-detail .detail ul a {
+  text-decoration: underline;
+  color: black;
+  font-weight: 500;
+}
 
 .buttons {
   margin-top: 2rem;
@@ -551,7 +556,7 @@ section#container-books .buttons button {
   box-shadow: -10px -10px 20px 0px rgb(50, 51, 51);
   border-radius: 5px;
 }
-#container-author-detail .detail span {
+#container-author-detail .detail y span {
   color: black;
 }
 #container-author-detail .detail h2 {
@@ -571,6 +576,11 @@ section#container-books .buttons button {
 }
 #container-author-detail .detail ul span {
   font-weight: 700;
+}
+#container-author-detail .detail ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
 .modal-delete-author {
@@ -985,7 +995,7 @@ input[type=checkbox] {
 }
 
 #new_authors {
-  width: 30%;
+  width: 26%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1383,6 +1393,10 @@ input[type=checkbox] {
   text-align: center;
   padding: 10px 0 10px 0;
 }
+.results-categories .container-list ul li h3 a, .results-categories .container-list ul li p a {
+  text-decoration: none;
+  color: black;
+}
 .results-categories .container-list ul li p {
   font-weight: normal;
 }
@@ -1396,11 +1410,34 @@ section#container-new-books {
   width: 100%;
   height: auto;
 }
-section#container-new-books h4 {
+section#container-new-books .header-new-books {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 10px;
+  border: 0.2rem solid transparent;
+  border-image: linear-gradient(5deg, #300000, #ad5706, #b87e3d) 1;
+}
+section#container-new-books .header-new-books h4 {
   font-size: 2rem;
   text-align: left;
   color: chocolate;
-  padding: 1rem;
+  padding: 10px;
+}
+section#container-new-books .header-new-books button {
+  padding: 5px;
+  background: none;
+  color: chocolate;
+  border-image: linear-gradient(5deg, #300000, #ad5706, #b87e3d) 1;
+}
+section#container-new-books .header-new-books button:hover {
+  transform: scale(0.9);
+}
+section#container-new-books .header-new-books button span {
+  font-size: 2.2rem;
 }
 
 .wrapper-card {
@@ -1535,21 +1572,40 @@ section#container-new-authors {
   text-decoration: none;
   margin: auto;
 }
-section#container-new-authors h4 {
+section#container-new-authors .header-new-authors {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid #000000;
-  font-size: 1.5rem;
   text-align: left;
-  color: #fff;
-  padding: 1rem;
+  padding: 10px;
   background-color: #000000;
   border: 0.2rem solid transparent;
   border-image: linear-gradient(5deg, #444, #838383, #c7c7c7) 1;
+}
+section#container-new-authors .header-new-authors h4 {
+  font-size: 1.7rem;
+  text-align: left;
+  color: #fff;
+  padding: 10px;
+}
+section#container-new-authors .header-new-authors button {
+  padding: 5px;
+  background: none;
+  color: rgb(255, 255, 255);
+}
+section#container-new-authors .header-new-authors button:hover {
+  transform: scale(0.9);
+}
+section#container-new-authors .header-new-authors button span {
+  font-size: 2.2rem;
 }
 section#container-new-authors .card-authors {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 0rem 0rem 0rem;
   margin: auto;
   overflow-y: auto;
   max-height: 70vh;
@@ -1611,13 +1667,15 @@ section#container-new-authors .card-authors .authors .button {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: fit-content;
+  padding: 5px;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
-  margin-right: 10px;
+  background: none;
 }
-section#container-new-authors .card-authors .authors .button img {
-  margin-right: 10px;
+section#container-new-authors .card-authors .authors .button:hover {
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.3647058824);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 350px) {
