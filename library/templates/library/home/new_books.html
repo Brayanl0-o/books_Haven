@@ -2,7 +2,14 @@
 
 <section id="container-new-books">
 
-    <h4>Novedades Libros &#129179;</h4>
+    <div class="header-new-books">
+        <h4>Novedades Libros &#129179; </h4>
+        <button onclick="window.location.href=`{% url 'books' %}`"  >
+            <span class="material-symbols-outlined">
+                view_list
+            </span>
+        </button>
+    </div>
 
     {% if books%}
     <div class="wrapper-card">
