@@ -2,7 +2,15 @@
 
 <section id="container-new-authors">
 
-    <h4>Autores &#129179; </h4>
+ 
+    <div class="header-new-authors">
+        <h4>Autores &#129179; </h4>
+        <button onclick="window.location.href=`{% url 'authors' %}`"  >
+            <span class="material-symbols-outlined">
+                view_list
+            </span>
+        </button>
+    </div>
     {%if authors %}
     <div class="card-authors">
         {% for author in authors %}
@@ -38,6 +46,8 @@
             {% empty %}
             <span>No hay autores disponibles.</span>
         {% endfor %}
+      
+     
     </div>
     {% endif %}
 </section>
