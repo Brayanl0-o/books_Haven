@@ -23,10 +23,12 @@ def books_for_category(request, category):
     for book in filters_books:
         
         author_dict = {
+            'pk': book.author.pk if book.author else None,
             'name': book.author.name if book.author else None 
         }
 
         book_data = {
+            'pk': book.pk,
             'name': book.name,
             'author': author_dict,
             'release_date': book.release_date,
