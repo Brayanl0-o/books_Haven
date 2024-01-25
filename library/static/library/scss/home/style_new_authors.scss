@@ -1,27 +1,44 @@
 section#container-new-authors{
-
     background-color: $secondary-color;
-    // margin-top: 4rem;
     height: auto;
     text-decoration: none;
     margin: auto;
-
-    h4{
+    
+    .header-new-authors{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
         border: 1px solid $primary-color ;
-        font-size: 1.5rem;
         text-align: left;
-        color: $secondary-color;
-        padding: 1rem;
+        padding: 10px;
         background-color: $primary-color;
         border:  0.2rem solid transparent;
         border-image: linear-gradient(5deg, #444, #838383, #c7c7c7) 1;
+        h4{
+            font-size: 1.7rem;
+            text-align: left;
+            color: $secondary-color;
+            padding: 10px;
+        }
+        button{
+            padding: 5px;
+            background: none;
+            color:rgb(255, 255, 255);
+            &:hover{
+                transform: scale(0.9);
+            }
+            span{
+                font-size: 2.2rem;
+            }
+        }
     }
 
     .card-authors{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
         justify-content: center;
-        padding: 1rem;
+        padding: 1rem 0rem 0rem 0rem;
         margin: auto;
         overflow-y: auto;
         max-height: 70vh;
@@ -29,7 +46,6 @@ section#container-new-authors{
         border-top: none;
         border-image: linear-gradient(5deg, #000000, #000000, #a5a5a5) 1;
      
-       
         a{
             text-decoration: none;
             border-bottom:1px rgb(29, 28, 28) solid;
@@ -57,7 +73,6 @@ section#container-new-authors{
                 }
             }   
            
-
             .description{
                 display: flex;
                 flex-flow: column wrap;
@@ -84,45 +99,42 @@ section#container-new-authors{
                     text-overflow: ellipsis; 
                     white-space: nowrap; 
                 }
-            
             } 
 
             .button{
-                
                 cursor: pointer;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-around;
                 align-items: center;
-                width: 100%;
+                width: fit-content;
+                padding: 5px;
                 border: none;
-                background-color: #0000;
-                margin-right: 10px;
-
-                img{
-                    margin-right: 10px;
+                background:none;
+                // margin-right: 10px;
+                &:hover{
+                    border-radius: 100px;
+                    background-color: #0000005d;
+                    transform: scale(1.1);
+                   
                 }
+                
             }
         }
     }
 }
 @media screen and (max-width:350px) {
     section#container-new-authors{
-     
         width: 100%;
         margin: auto;
-    
         h4{
             font-size: 1.2rem;
             text-align: center;
         }
     }
-   
     .card{
-
         flex-basis: 250px;
         height: 350px;
         margin-bottom: 10%;
-
     }
 }
