@@ -5,14 +5,39 @@ section#container-new-books{
     width: 100%;
     height: auto;
 
-    h4{
-        font-size: 2rem;
+    .header-new-books{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $primary-color ;
         text-align: left;
-        color: $text-color-secondary;
-        padding: 1rem;
+        padding: 10px;
+        // background-color: $primary-color;
+        border:  0.2rem solid transparent;
+        border-image: linear-gradient(5deg, #300000, #ad5706, #b87e3d) 1;
+        h4{
+            font-size: 2rem;
+            text-align: left;
+            color: $text-color-secondary;
+            padding: 10px;
+        }
+        button{
+            padding: 5px;
+            background: none;
+            color: $text-color-secondary;
+            border-image: linear-gradient(5deg, #300000, #ad5706, #b87e3d) 1;
+            &:hover{
+                transform: scale(0.9);
+            }
 
-      
+            span{
+                font-size: 2.2rem;
+
+            }
+        }
     }
+   
 }
 
 .wrapper-card{
