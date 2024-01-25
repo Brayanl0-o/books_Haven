@@ -30,7 +30,7 @@
         min-height: 50vh;
         padding:10px;
         box-shadow:  -10px -10px 20px 0px rgb(50, 51, 51);
-        border-radius: 5px;
+        border-radius: 5px;y
 
         span{
         color: black;
@@ -55,6 +55,11 @@
 
             span{
                 font-weight: 700;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                font-weight: 500;
             }
         }
 
