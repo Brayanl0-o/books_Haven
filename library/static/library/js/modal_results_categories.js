@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (Array.isArray(data.books) && data.books.length > 0) {
             data.books.forEach(function (book) {
                 var li = document.createElement('li');
-                li.innerHTML = '<h3>' + book.name + '</h3>' +
-                            '<p>' + (book.author.name || 'Autor no disponible') + '</p>' +
+                li.innerHTML = '<h3>' +'<a href="/book/' + book.pk + '/">'+ book.name + '</a></h3>' +
+                            '<p>' + '<a href="/author/' + book.author.pk + '/">' + (book.author.name || 'Autor no disponible') + '</a></p>' +
                             '<p>' + (book.release_date || 'Fecha no disponible') + '</p>';
                 ul.appendChild(li);
             });
