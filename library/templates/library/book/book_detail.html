@@ -6,7 +6,6 @@
 
 <script src="{% static 'library/js/modal.js' %}"></script>
 <div id="container-book-detail">
-    <img loading="lazy" src="{{ book.cover_page }} " width="50" height="50" alt="Portada del libro"> 
     <div class="detail">
         <h3> {{ book.name }}</h3>
 
@@ -65,6 +64,8 @@
                 {% endif %}
             </li>
         </ul>
+        
+        <img loading="lazy" src="{{ book.cover_page }} " width="50" height="50" alt="Portada del libro"> 
 
         
         <div class="buttons" >
