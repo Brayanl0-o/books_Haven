@@ -27,20 +27,11 @@
             </div>
 
             <div class="form-group">
-                <label for="{{ form.release_date.id_for_label }}">Fecha de lanzamiento:</label>
-                <input type="date" name="release_date" value="{{ book.release_date|date:'Y-m-d' }}" />
-
+                <label for="{{ form.category.id_for_label }}">Categoria:</label>
+                {{ form.category }}
             </div>
 
-            <div class="form-group">
-                <label for="{{ form.number_pages.id_for_label }}">Numero de paginas:</label>
-                <input type="number" name="number_pages" min="1" max="2000" value="{{ form.number_pages.value|default:'' }}" />
-            </div>
-    
-            <div class="form-group">
-                <label for="{{ form.cover_page.id_for_label }}">Portada del libro:</label>
-                {{ form.cover_page }}
-            </div>
+           
 
             <div class="form-group">
                 <label for="{{ form.link_dowload_free.id_for_label }}">Enlace de descarga gratis: </label>
@@ -52,11 +43,37 @@
                 {{ form.link_dowload_buy }}
             </div>
 
-            <div class="form-group" >
-                <label for="{{ form.summary.id_for_label }}">Resumen:</label>
-                {{ form.summary }}
-            </div>
+            <div class="footer-form">
+                
+                <div class="form-group" >
+                    <label for="{{ form.summary.id_for_label }}">Resumen:</label>
+                    {{ form.summary }}
+                </div>
+    
+               
+                <div class="data-pages">
 
+                    <div class="form-group">
+                        <label for="{{ form.cover_page.id_for_label }}">Portada del libro:</label>
+                        {{ form.cover_page }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.release_date.id_for_label }}">Fecha de lanzamiento:</label>
+                        <input type="date" name="release_date" value="{{ book.release_date|date:'Y-m-d' }}" />
+        
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="{{ form.number_pages.id_for_label }}">Numero de paginas:</label>
+                        <input type="number" name="number_pages" min="1" max="2000" value="{{ form.number_pages.value|default:'' }}" />
+                    </div>
+
+                </div>
+            </div>
+          
+        
+           
             <div class="buttons" >
     
                 <button  value="Submit">
