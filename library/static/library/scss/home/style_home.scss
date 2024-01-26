@@ -2,28 +2,41 @@
 
 #new_books {
     width: 70%;
-
+    height: fit-content;
+    margin-right: 20px;
 }
 #new_authors {
-    width: 26%; 
+    width:30%; 
 
 }
-
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1500px) {
     
     #new_books {
         width: auto;
     }
     #new_authors {
-        width: 80%; 
+        width: 55%; 
+        margin-left: 5%;
+    }
+
+}
+@media screen and (max-width:1050px) {
+    
+    #new_books {
+        width: auto;
+        margin-bottom: 0;
+    }
+    #new_authors {
+        margin-top: 0px;
         margin: auto;
+        width: 80%; 
     }
 
 }
 @media screen and (max-width:350px) {
   
     #new_authors {
-        width: 100%; 
+        width: 98%; 
         margin: auto;
     }
 
