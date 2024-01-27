@@ -51,24 +51,29 @@
     .container-search{
     
         margin-top: 5%;
+        margin-bottom: 4%;
+
         padding: 10px;
         padding-left: 2%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: start;
         align-items: center;
-        width: 100%;
+        width: max-content;
         // background-color: antiquewhite;
         input{
             position: absolute;
             border-radius: 10px;
+            width: min-content;
             padding: 10px;
             font-size: 1.2rem;
         }
         span.material-symbols-outlined{
-            position: relative;
-            top: 0;
-            left: 15%;
+            position:relative;
+            top: 0px;
+            left: 11rem;
+
+            width: max-content;
             padding: 1px;
             border-radius: 10px;
 
@@ -76,9 +81,8 @@
     }
     h2{
         text-align: center;
-        // padding-left:20%;
-        // margin-top: 10px;
-        font-size: 1.8rem;
+        padding: 5px;
+        font-size: 1.5rem;
         width: 35%;
         margin: auto;
         border-radius: 5px;
@@ -150,4 +154,89 @@
         }
     }
     
+}
+
+// Media querys
+@media screen and (max-width:768px){
+    .results-categories{
+        h1{
+            font-size: 1.6rem;
+            width: 40%;
+        }
+        .container-search{
+            input{
+                width:fit-content;
+            }
+            span.material-symbols-outlined{
+                left: 13.8rem;
+            }
+        }
+        h2{
+            font-size: 1.4rem;
+            width: 50%;
+        }
+        .titles{
+            li{
+                p{
+                    font-size: 1.3rem;
+                    font-weight:700;
+                    border-right: 1px solid black;
+                    width: 100%;
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+        }
+        .container-list{
+            ul{
+                li{
+                    h3,p{
+                        font-size: 1.1rem;
+                        padding: 10px 0 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width:550px){
+    .results-categories{
+        width: 90%;
+        h1{
+            font-size: 1rem;
+            width: 50%;
+        }
+        .titles{
+            li{
+                p{
+                    font-size: 1.4rem;
+                }
+                :nth-child(2){
+                    border-right: none;
+                }
+                :nth-child(3){
+                    display: none;
+                }
+            }
+        }
+    }
+   
+}
+
+@media screen and (max-width:450px){
+    .results-categories{
+        h1{
+            font-size: 1.2rem;
+            width:55%;
+        }
+        .container-search{
+            input{
+                width:80%;
+            }
+            span.material-symbols-outlined{
+                left: 10rem;
+            }
+        }
+    }
 }
