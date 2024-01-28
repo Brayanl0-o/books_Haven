@@ -603,8 +603,9 @@ section#container-books .buttons button {
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
+  gap: 40px;
   margin-top: 1%;
   margin-bottom: 4%;
 }
@@ -613,7 +614,6 @@ section#container-books .buttons button {
   flex-basis: 300px;
   flex-grow: 0;
   height: 400px;
-  margin: 2rem;
   box-shadow: -15px -3px 5px 5px rgb(50, 51, 51);
   cursor: pointer;
   margin-top: 3%;
