@@ -1,3 +1,3 @@
-# library Book's Heave
+# Book's Haven
 
-A virtual library for storage books and authors, built with Python, Django and Html, CSS, y SCSS as a CSS preprocessor.
+A virtual library for storage books and authors, built with Python, Django and SCSS as a CSS preprocessor.
